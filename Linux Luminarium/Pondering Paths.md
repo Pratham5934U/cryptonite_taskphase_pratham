@@ -66,10 +66,28 @@ hacker@paths~position-elsewhere:/home$
 # 5. Position yet elsewhere
 
 **Flag**
-
+pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
 
 **Procedure**
-
+hacker@paths~position-yet-elsewhere:~$ /challenge/run
+Incorrect...
+You are not currently in the /usr/share/zoneinfo/posix/Asia directory.
+Please use the `cd` utility to change directory appropriately.
+hacker@paths~position-yet-elsewhere:~$ cd /usr/share/zoneinfo/posix/Asia directory.
+bash: cd: too many arguments
+hacker@paths~position-yet-elsewhere:~$ cd /usr/share/zoneinfo/posix/Asia directory
+bash: cd: too many arguments
+hacker@paths~position-yet-elsewhere:~$ /usr/share/zoneinfo/posix/Aisa
+bash: /usr/share/zoneinfo/posix/Aisa: No such file or directory
+hacker@paths~position-yet-elsewhere:~$ /usr/share/zoneinfo/posix
+bash: /usr/share/zoneinfo/posix: Is a directory
+hacker@paths~position-yet-elsewhere:~$ cd /usr/share/zoneinfo/posix
+hacker@paths~position-yet-elsewhere:/usr/share/zoneinfo/posix$ cd /usr/share/zoneinfo/posix/Asia
+hacker@paths~position-yet-elsewhere:/usr/share/zoneinfo/posix/Asia$ /challenge/run
+Correct!!!
+/challenge/run is an absolute path, invoked from the right directory!
+Here is your flag:
+pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
 
 
 
