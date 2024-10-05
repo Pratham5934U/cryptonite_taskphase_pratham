@@ -1,82 +1,103 @@
 # 1. cat: not the pet, but the command
 
-**Flag:**
+**Flag:**     
 pwn.college{E4LKRg0P1sE3A5BZGyvV4YOMhOJ.dFzN1QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~cat-not-the-pet-but-the-command:~$ cat flag
+**Procedure**     
+In this challenge the flag was copied in the home directory. On opening the terminal I was already in the home directory this was concluded by the symbool '~' so i had to just type 'cat flag' command and the flag was read out.
+
+**Code** <br>
+hacker@commands~cat-not-the-pet-but-the-command:~$ cat flag   
 pwn.college{E4LKRg0P1sE3A5BZGyvV4YOMhOJ.dFzN1QDLzcTN0czW}
 
 # 2. catting absolute path
 
-**Flag**
+**Flag**    
 pwn.college{Qdc3mxrwVLgfva4QDUVgK0D4xQT.dlTM5QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~catting-absolute-paths:~$ cat /flag
+**Procedure**     
+In this challenge the flag is in /flag where the flag always lives in pwn.college to get it I had to just type the 'cat' and then the absolute path '/flag'.
+
+**Code:**    
+hacker@commands~catting-absolute-paths:~$ cat /flag       
 pwn.college{Qdc3mxrwVLgfva4QDUVgK0D4xQT.dlTM5QDLzcTN0czW}
 
 
 # 3. more catting practice
 
-**Flag**
+**Flag**       
 pwn.college{IP2KgAOUIRsc6aqw8BEFW_T0cw3.dBjM5QDLzcTN0czW}
 
-**Procedure**
+**Procedure**          
+Here I could not use 'cd' command to enter the directory so to get the flag I had to read out the flag in the provided location, used 'cat' along with the absolute path where the flag was stored  '/usr/share/calendar/flag'.
+
+**Code**    
 You cannot use the 'cd' command in this level, and must retrieve the flag by 
 absolute path. Plus, I hid the flag in a different directory! You can find it 
 in the file /usr/share/calendar/flag. Go cat it out **without** cding into that 
-directory!
-hacker@commands~more-catting-practice:~$ cat /usr/share/calendar/flag
+directory!       
+hacker@commands~more-catting-practice:~$ cat /usr/share/calendar/flag       
 pwn.college{IP2KgAOUIRsc6aqw8BEFW_T0cw3.dBjM5QDLzcTN0czW}
 
 # 4. grepping for a needle in a haystack
 
-**Flag**
+**Flag**     
 pwn.college{oypET6Dsr1PJ_oKDPoeZ13dN0a6.ddTM4QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt
+**Procedure**    
+ 'grep' command is used to search the file for lines of text containing SEARCH_STRING and print them to the console. Here there were a hundred thousand lines of text into the /challenge/data.txt file so I used grep command to search the line which starts with 'pwn.college' as the flags have the same starting. 
+
+**Code**     
+hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt      
 pwn.college{oypET6Dsr1PJ_oKDPoeZ13dN0a6.ddTM4QDLzcTN0czW}
 
 
 # 5. listing files
 
-**Flag**
+**Flag**     
 pwn.college{EzTAXD_xTvnII7SLa_Ec08uhdMM.dhjM4QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~listing-files:~$ ls /
+**Procedure**       
+I had to use 'ls' command to list the everything in the home directory then used the same command with absolute path '/challenge' and got the renamed flag file.
+
+**Code:**         
+hacker@commands~listing-files:~$ ls /    
 bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~listing-files:~$ ls /challenge
-17034-renamed-run-32665  DESCRIPTION.md
-hacker@commands~listing-files:~$ /challenge/17034-renamed-run-32665 
-Yahaha, you found me! Here is your flag:
-pwn.college{EzTAXD_xTvnII7SLa_Ec08uhdMM.dhjM4QDLzcTN0czW}
-hacker@commands~listing-files:~$ /flag
-bash: /flag: Permission denied
+hacker@commands~listing-files:~$ ls /challenge      
+17034-renamed-run-32665  DESCRIPTION.md        
+hacker@commands~listing-files:~$ /challenge/17034-renamed-run-32665        
+Yahaha, you found me! Here is your flag:        
+pwn.college{EzTAXD_xTvnII7SLa_Ec08uhdMM.dhjM4QDLzcTN0czW}    
+hacker@commands~listing-files:~$ /flag         
+bash: /flag: Permission denied      
 
 # 6. touching files
 
-**Flag**
+**Flag**      
 pwn.college{E6klr13UGhsQcQWmNnGXRzmUjNS.dBzM4QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~touching-files:~$ ls /tmp
-bin  hsperfdata_root  tmp.XvrUsDZh8M  vscode-git-350992565c.sock  vscode-ipc-1f62b92b-07e4-4c0e-b4f4-553e3031b8b2.sock  vscode-ipc-f90f7932-33f5-4582-aba6-0b08ba2d3733.sock
-hacker@commands~touching-files:~$ touch /tmp/pwn
-hacker@commands~touching-files:~$ touch /tmp/college
-hacker@commands~touching-files:~$ /challenge/run
-Success! Here is your flag:
+**Procedure**        
+I had to creat two files named 'pwn' and 'college' in '/tmp' then executed 'run' program in 'challenge' directory.
+
+**Code:**         
+hacker@commands~touching-files:~$ ls /tmp     
+bin  hsperfdata_root  tmp.XvrUsDZh8M  vscode-git-350992565c.sock  vscode-ipc-1f62b92b-07e4-4c0e-b4f4-553e3031b8b2.sock  vscode-ipc-f90f7932-33f5-4582-aba6-0b08ba2d3733.sock      
+hacker@commands~touching-files:~$ touch /tmp/pwn        
+hacker@commands~touching-files:~$ touch /tmp/college        
+hacker@commands~touching-files:~$ /challenge/run      
+Success! Here is your flag:       
 pwn.college{E6klr13UGhsQcQWmNnGXRzmUjNS.dBzM4QDLzcTN0czW}
 
 
 # 7. removing files
 
-**Flag**
+**Flag**         
 pwn.college{M7C7ekGy8wFIyzDWQs9VvPqb2sx.dZTOwUDLzcTN0czW}
 
-**Procedure**
+**Procedure**   
+I had to delete a file named 'delete_me' stored in home directory using 'rm' command and provided the relative path.
+
+**Code:**          
 hacker@commands~removing-files:~$ ls
 Desktop  a  delete_me
 hacker@commands~removing-files:~$ ls
@@ -91,146 +112,148 @@ pwn.college{M7C7ekGy8wFIyzDWQs9VvPqb2sx.dZTOwUDLzcTN0czW}
 
 # 8. hidden files
 
-**Flag**
+**Flag**     
 pwn.college{AhEe4zGZvo1Z_HRsWHLTiOd6yZ_.dBTN4QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~hidden-files:~$ ls
-Desktop  a
-hacker@commands~hidden-files:~$ cd /
-hacker@commands~hidden-files:/$ ls 
-bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~hidden-files:/$ ls -a
-.  ..  .dockerenv  .flag-24604320419474  bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~hidden-files:/$ 
-hacker@commands~hidden-files:/$ /.flag-24604320419474 
-bash: /.flag-24604320419474: Permission denied
-hacker@commands~hidden-files:/$ /flag-24604320419474 
-bash: /flag-24604320419474: No such file or directory
-hacker@commands~hidden-files:/$ cat .flag-24604320419474 
+**Procedure** 
+In this challenge the flag was kept in a hidden file using '.' in the starting to list the hidden files I had to invoke ls with -a, after getting the file name I read it out using 'cat' command.  
+
+**Code:**    
+hacker@commands~hidden-files:~$ ls     
+Desktop  a   
+hacker@commands~hidden-files:~$ cd /    
+hacker@commands~hidden-files:/$ ls        
+bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var      
+hacker@commands~hidden-files:/$ ls -a         
+.  ..  .dockerenv  .flag-24604320419474  bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var      
+hacker@commands~hidden-files:/$ cat .flag-24604320419474            
 pwn.college{AhEe4zGZvo1Z_HRsWHLTiOd6yZ_.dBTN4QDLzcTN0czW}
 
 
 # # 9. AN Epic Filesystem Quest
 
-**Flag**
+**Flag**      
 pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
 
-**Procedure**
-hacker@commands~an-epic-filesystem-quest:~$ cd /
-hacker@commands~an-epic-filesystem-quest:/$ ls
-INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~an-epic-filesystem-quest:/$ ls -a
-.  ..  .dockerenv  INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~an-epic-filesystem-quest:/$ /INSIGHT
-bash: /INSIGHT: Permission denied
-hacker@commands~an-epic-filesystem-quest:/$ cd /INSIGHT
-bash: cd: /INSIGHT: Not a directory
-hacker@commands~an-epic-filesystem-quest:/$ cat .dockerenv 
-hacker@commands~an-epic-filesystem-quest:/$ cat flag
-cat: flag: Permission denied
-hacker@commands~an-epic-filesystem-quest:/$ cat challenge
-cat: challenge: Is a directory
-hacker@commands~an-epic-filesystem-quest:/$ /challenge
-bash: /challenge: Is a directory
-hacker@commands~an-epic-filesystem-quest:/$ cd /challenge
-hacker@commands~an-epic-filesystem-quest:/challenge$ ls
-DESCRIPTION.md
-hacker@commands~an-epic-filesystem-quest:/challenge$ ls -a
-.  ..  .bashrc  .init  DESCRIPTION.md
-hacker@commands~an-epic-filesystem-quest:/challenge$ cd /
-hacker@commands~an-epic-filesystem-quest:/$ cd
-hacker@commands~an-epic-filesystem-quest:~$ ls
-Desktop  a
-hacker@commands~an-epic-filesystem-quest:~$ cd /
-hacker@commands~an-epic-filesystem-quest:/$ ls
-INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~an-epic-filesystem-quest:/$ ls -a
-.  ..  .dockerenv  INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~an-epic-filesystem-quest:/$ cat INSIGHT
-Lucky listing!
-The next clue is in: /usr/share/matplotlib/mpl-data/stylelib
+**Procedure**     
 
-The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.
-hacker@commands~an-epic-filesystem-quest:/$ cd /usr
-hacker@commands~an-epic-filesystem-quest:/usr$ /share/matplotlib/mpl-data/stylelib
-bash: /share/matplotlib/mpl-data/stylelib: No such file or directory
-hacker@commands~an-epic-filesystem-quest:/usr$ ls
-aarch64-linux-gnu  bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src
-hacker@commands~an-epic-filesystem-quest:/usr$ /share
-bash: /share: No such file or directory
-hacker@commands~an-epic-filesystem-quest:/usr$ cd /share
-bash: cd: /share: No such file or directory
-hacker@commands~an-epic-filesystem-quest:/usr$ /usr/share/matplotlib/mpl-data/stylelib
-bash: /usr/share/matplotlib/mpl-data/stylelib: Is a directory
-hacker@commands~an-epic-filesystem-quest:/usr$ cd /usr/share/matplotlib/mpl-data/stylelib
-hacker@commands~an-epic-filesystem-quest:/usr/share/matplotlib/mpl-data/stylelib$ ls
+
+**Code:**    
+hacker@commands~an-epic-filesystem-quest:~$ cd /     
+hacker@commands~an-epic-filesystem-quest:/$ ls       
+INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var     
+hacker@commands~an-epic-filesystem-quest:/$ ls -a    
+.  ..  .dockerenv  INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var       
+hacker@commands~an-epic-filesystem-quest:/$ /INSIGHT     
+bash: /INSIGHT: Permission denied     
+hacker@commands~an-epic-filesystem-quest:/$ cd /INSIGHT        
+bash: cd: /INSIGHT: Not a directory        
+hacker@commands~an-epic-filesystem-quest:/$ cat .dockerenv            
+hacker@commands~an-epic-filesystem-quest:/$ cat flag        
+cat: flag: Permission denied            
+hacker@commands~an-epic-filesystem-quest:/$ cat challenge       
+cat: challenge: Is a directory          
+hacker@commands~an-epic-filesystem-quest:/$ /challenge         
+bash: /challenge: Is a directory               
+hacker@commands~an-epic-filesystem-quest:/$ cd /challenge          
+hacker@commands~an-epic-filesystem-quest:/challenge$ ls        
+DESCRIPTION.md          
+hacker@commands~an-epic-filesystem-quest:/challenge$ ls -a       
+.  ..  .bashrc  .init  DESCRIPTION.md       
+hacker@commands~an-epic-filesystem-quest:/challenge$ cd /     
+hacker@commands~an-epic-filesystem-quest:/$ cd      
+hacker@commands~an-epic-filesystem-quest:~$ ls          
+Desktop  a       
+hacker@commands~an-epic-filesystem-quest:~$ cd /          
+hacker@commands~an-epic-filesystem-quest:/$ ls        
+INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var     
+hacker@commands~an-epic-filesystem-quest:/$ ls -a          
+.  ..  .dockerenv  INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var       
+hacker@commands~an-epic-filesystem-quest:/$ cat INSIGHT        
+Lucky listing!         
+The next clue is in: /usr/share/matplotlib/mpl-data/stylelib         
+
+The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.         
+hacker@commands~an-epic-filesystem-quest:/$ cd /usr        
+hacker@commands~an-epic-filesystem-quest:/usr$ /share/matplotlib/mpl-data/stylelib           
+bash: /share/matplotlib/mpl-data/stylelib: No such file or directory          
+hacker@commands~an-epic-filesystem-quest:/usr$ ls               
+aarch64-linux-gnu  bin  games  include  lib  lib32  lib64  libexec  libx32  local  sbin  share  src              
+hacker@commands~an-epic-filesystem-quest:/usr$ /share          
+bash: /share: No such file or directory            
+hacker@commands~an-epic-filesystem-quest:/usr$ cd /share         
+bash: cd: /share: No such file or directory         
+hacker@commands~an-epic-filesystem-quest:/usr$ /usr/share/matplotlib/mpl-data/stylelib          
+bash: /usr/share/matplotlib/mpl-data/stylelib: Is a directory            
+hacker@commands~an-epic-filesystem-quest:/usr$ cd /usr/share/matplotlib/mpl-data/stylelib          
+hacker@commands~an-epic-filesystem-quest:/usr/share/matplotlib/mpl-data/stylelib$ ls            
 BLUEPRINT                 classic.mplstyle          ggplot.mplstyle              seaborn-dark-palette.mplstyle  seaborn-muted.mplstyle     seaborn-poster.mplstyle  seaborn-whitegrid.mplstyle
 Solarize_Light2.mplstyle  dark_background.mplstyle  grayscale.mplstyle           seaborn-dark.mplstyle          seaborn-notebook.mplstyle  seaborn-talk.mplstyle    seaborn.mplstyle
 _classic_test.mplstyle    fast.mplstyle             seaborn-bright.mplstyle      seaborn-darkgrid.mplstyle      seaborn-paper.mplstyle     seaborn-ticks.mplstyle   tableau-colorblind10.mplstyle
 bmh.mplstyle              fivethirtyeight.mplstyle  seaborn-colorblind.mplstyle  seaborn-deep.mplstyle          seaborn-pastel.mplstyle    seaborn-white.mplstyle
-hacker@commands~an-epic-filesystem-quest:/usr/share/matplotlib/mpl-data/stylelib$ cat BLUEPRINT
-Tubular find!
-The next clue is in: /opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8
+hacker@commands~an-epic-filesystem-quest:/usr/share/matplotlib/mpl-data/stylelib$ cat BLUEPRINT          
+Tubular find!           
+The next clue is in: /opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8       
 
-The next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.
-hacker@commands~an-epic-filesystem-quest:/usr/share/matplotlib/mpl-data/stylelib$ cd /opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ ls -a
-.  ..  .NOTE  build-script-build-script-build  build-script-build-script-build.json  dep-build-script-build-script-build  invoked.timestamp
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat .NOTE
-Great sleuthing!
-The next clue is in: /usr/share/tcltk/tk8.6/ttk
+The next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.         
+hacker@commands~an-epic-filesystem-quest:/usr/share/matplotlib/mpl-data/stylelib$ cd /opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8       
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ ls -a       
+.  ..  .NOTE  build-script-build-script-build  build-script-build-script-build.json  dep-build-script-build-script-build  invoked.timestamp       
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat .NOTE        
+Great sleuthing!           
+The next clue is in: /usr/share/tcltk/tk8.6/ttk      
 
-Watch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$  /usr/share/tcltk/tk8.6/ttk
-bash: /usr/share/tcltk/tk8.6/ttk: Is a directory
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat  /usr/share/tcltk/tk8.6/ttk
-cat: /usr/share/tcltk/tk8.6/ttk: Is a directory
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat  /usr/share/tcltk/tk8.6/ttk
-cat: /usr/share/tcltk/tk8.6/ttk: Is a directory
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ ls  /usr/share/tcltk/tk8.6/ttk
-SPOILER-TRAPPED  aquaTheme.tcl  clamTheme.tcl     combobox.tcl  defaults.tcl  fonts.tcl       notebook.tcl     progress.tcl  scrollbar.tcl  spinbox.tcl   ttk.tcl    vistaTheme.tcl  xpTheme.tcl
-altTheme.tcl     button.tcl     classicTheme.tcl  cursors.tcl   entry.tcl     menubutton.tcl  panedwindow.tcl  scale.tcl     sizegrip.tcl   treeview.tcl  utils.tcl  winTheme.tcl
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat SPOILER-TRAPPED
-cat: SPOILER-TRAPPED: No such file or directory
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat  /usr/share/tcltk/tk8.6/ttk/SPOILER-TRAPPED
-Tubular find!
-The next clue is in: /usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar
-hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cd /usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ ls
-SNIPPET  __init__.py  __pycache__  base.py  formatters.py
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ cat SNIPPET
-Great sleuthing!
-The next clue is in: /usr/share/rsync
+Watch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!        
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$  /usr/share/tcltk/tk8.6/ttk          
+bash: /usr/share/tcltk/tk8.6/ttk: Is a directory          
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat  /usr/share/tcltk/tk8.6/ttk     
+cat: /usr/share/tcltk/tk8.6/ttk: Is a directory          
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat  /usr/share/tcltk/tk8.6/ttk        
+cat: /usr/share/tcltk/tk8.6/ttk: Is a directory         
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ ls  /usr/share/tcltk/tk8.6/ttk        
+SPOILER-TRAPPED  aquaTheme.tcl  clamTheme.tcl     combobox.tcl  defaults.tcl  fonts.tcl       notebook.tcl     progress.tcl  scrollbar.tcl  spinbox.tcl   ttk.tcl    vistaTheme.tcl  xpTheme.tcl           
+altTheme.tcl     button.tcl     classicTheme.tcl  cursors.tcl   entry.tcl     menubutton.tcl  panedwindow.tcl  scale.tcl     sizegrip.tcl   treeview.tcl  utils.tcl  winTheme.tcl      
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat SPOILER-TRAPPED        
+cat: SPOILER-TRAPPED: No such file or directory           
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cat  /usr/share/tcltk/tk8.6/ttk/SPOILER-TRAPPED        
+Tubular find!            
+The next clue is in: /usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar          
+hacker@commands~an-epic-filesystem-quest:/opt/kropr/target/release/.fingerprint/thiserror-d63aee1970f751e8$ cd /usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar          
+hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ ls           
+SNIPPET  __init__.py  __pycache__  base.py  formatters.py              
+hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ cat SNIPPET             
+Great sleuthing!                
+The next clue is in: /usr/share/rsync              
 
-Watch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ ls /usr/share/rsync
-CLUE-TRAPPED  scripts
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ cat /usr/share/rsync/CLUE-TRAPPED
-Great sleuthing!
-The next clue is in: /usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand
+Watch out! The next clue is **trapped**. You'll need to read it out without 'cd'ing into the directory; otherwise, the clue will self destruct!                 
+hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ ls /usr/share/rsync                    
+CLUE-TRAPPED  scripts                    
+hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ cat /usr/share/rsync/CLUE-TRAPPED                 
+Great sleuthing!               
+The next clue is in: /usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand              
 
-The next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.
-hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ cd  /usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand
-hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand$ ls -a
-.  ..  .TIP  __init__.py  __pycache__  autoasync.py  autocommand.py  automain.py  autoparse.py  errors.py
-hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand$ cat .TIP
-Tubular find!
-The next clue is in: /etc/php/7.4/apache2/conf.d
+The next clue is **hidden** --- its filename starts with a '.' character. You'll need to look for it using special options to 'ls'.             
+hacker@commands~an-epic-filesystem-quest:/usr/lib/python3/dist-packages/prompt_toolkit/shortcuts/progress_bar$ cd  /usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand    
+hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand$ ls -a           
+.  ..  .TIP  __init__.py  __pycache__  autoasync.py  autocommand.py  automain.py  autoparse.py  errors.py         
+hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand$ cat .TIP           
+Tubular find!       
+The next clue is in: /etc/php/7.4/apache2/conf.d          
 
-The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.
-hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand$ cd /etc/php/7.4/apache2/conf.d
-hacker@commands~an-epic-filesystem-quest:/etc/php/7.4/apache2/conf.d$ ls
-10-mysqlnd.ini  10-pdo.ini       20-ctype.ini  20-ffi.ini       20-ftp.ini      20-iconv.ini  20-mysqli.ini     20-phar.ini   20-readline.ini  20-sockets.ini  20-sysvsem.ini  20-tokenizer.ini
-10-opcache.ini  20-calendar.ini  20-exif.ini   20-fileinfo.ini  20-gettext.ini  20-json.ini   20-pdo_mysql.ini  20-posix.ini  20-shmop.ini     20-sysvmsg.ini  20-sysvshm.ini  EVIDENCE
-hacker@commands~an-epic-filesystem-quest:/etc/php/7.4/apache2/conf.d$ cat EVIDENCE
-Congratulations, you found the clue!
-The next clue is in: /opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha
-hacker@commands~an-epic-filesystem-quest:/etc/php/7.4/apache2/conf.d$ cd /opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha
-hacker@commands~an-epic-filesystem-quest:/opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha$ ls
-BRIEF  cpu_loop.c  signal.c  sockbits.h  syscall_nr.h  target_cpu.h  target_elf.h  target_fcntl.h  target_signal.h  target_structs.h  target_syscall.h  termbits.h
-hacker@commands~an-epic-filesystem-quest:/opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha$ cat BRIEF
-CONGRATULATIONS! Your perserverence has paid off, and you have found the flag!
+The next clue is **delayed** --- it will not become readable until you enter the directory with 'cd'.         
+hacker@commands~an-epic-filesystem-quest:/usr/local/lib/python3.8/dist-packages/setuptools/_vendor/autocommand$ cd /etc/php/7.4/apache2/conf.d         
+hacker@commands~an-epic-filesystem-quest:/etc/php/7.4/apache2/conf.d$ ls               
+10-mysqlnd.ini  10-pdo.ini       20-ctype.ini  20-ffi.ini       20-ftp.ini      20-iconv.ini  20-mysqli.ini     20-phar.ini   20-readline.ini  20-sockets.ini  20-sysvsem.ini  20- 
+   tokenizer.ini      
+10-opcache.ini  20-calendar.ini  20-exif.ini   20-fileinfo.ini  20-gettext.ini  20-json.ini   20-pdo_mysql.ini  20-posix.ini  20-shmop.ini     20-sysvmsg.ini  20-sysvshm.ini  EVIDENCE    
+hacker@commands~an-epic-filesystem-quest:/etc/php/7.4/apache2/conf.d$ cat EVIDENCE       
+Congratulations, you found the clue!         
+The next clue is in: /opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha              
+hacker@commands~an-epic-filesystem-quest:/etc/php/7.4/apache2/conf.d$ cd /opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha          
+hacker@commands~an-epic-filesystem-quest:/opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha$ ls            
+BRIEF  cpu_loop.c  signal.c  sockbits.h  syscall_nr.h  target_cpu.h  target_elf.h  target_fcntl.h  target_signal.h  target_structs.h  target_syscall.h  termbits.h             
+hacker@commands~an-epic-filesystem-quest:/opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha$ cat BRIEF          
+CONGRATULATIONS! Your perserverence has paid off, and you have found the flag!           
 It is: pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
 
 # 10. making directories
