@@ -136,7 +136,7 @@ pwn.college{AhEe4zGZvo1Z_HRsWHLTiOd6yZ_.dBTN4QDLzcTN0czW}
 pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
 
 **Procedure**     
-
+In this challenge the was a huge file system in which I listed different files and directories to find the first clue after that I follow the clues which led to flag.
 
 **Code:**    
 hacker@commands~an-epic-filesystem-quest:~$ cd /     
@@ -262,17 +262,20 @@ It is: pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
 pwn.college{krLrsjNDLCHYFpHUS96nA9epr63.dFzM4QDLzcTN0czW}
 
 **Procedure**
-hacker@commands~making-directories:~$ mkdir /tmp/pwn
-hacker@commands~making-directories:~$ ls /tmp
-bin  hsperfdata_root  pwn  tmp.XvrUsDZh8M  vscode-git-7afde2b337.sock  vscode-ipc-4c74aabe-d87d-4e4e-a39a-f4bd91da2e8e.sock  vscode-ipc-a2914e18-da9e-4775-a57a-8a34b6906e99.sock
-hacker@commands~making-directories:~$ /tmp/pwn
-bash: /tmp/pwn: Is a directory
-hacker@commands~making-directories:~$ cd tmp/pwn
-bash: cd: tmp/pwn: No such file or directory
-hacker@commands~making-directories:~$ cd /tmp/pwn
-hacker@commands~making-directories:/tmp/pwn$ touch college
-hacker@commands~making-directories:/tmp/pwn$ /challenge/run
-Success! Here is your flag:
+
+
+**Code:**   
+hacker@commands~making-directories:~$ mkdir /tmp/pwn.  
+hacker@commands~making-directories:~$ ls /tmp. 
+bin  hsperfdata_root  pwn  tmp.XvrUsDZh8M  vscode-git-7afde2b337.sock  vscode-ipc-4c74aabe-d87d-4e4e-a39a-f4bd91da2e8e.sock  vscode-ipc-a2914e18-da9e-4775-a57a-8a34b6906e99.sock.   
+hacker@commands~making-directories:~$ /tmp/pwn.  
+bash: /tmp/pwn: Is a directory.  
+hacker@commands~making-directories:~$ cd tmp/pwn.  
+bash: cd: tmp/pwn: No such file or directory.  
+hacker@commands~making-directories:~$ cd /tmp/pwn. 
+hacker@commands~making-directories:/tmp/pwn$ touch college.  
+hacker@commands~making- directories:/tmp/pwn$ /challenge/run.  
+Success! Here is your flag:   
 pwn.college{krLrsjNDLCHYFpHUS96nA9epr63.dFzM4QDLzcTN0czW}
 
 # 11. Finding files
@@ -281,35 +284,38 @@ pwn.college{krLrsjNDLCHYFpHUS96nA9epr63.dFzM4QDLzcTN0czW}
 pwn.college{Y2DotLqEdoUSSlfVBJmuylV9EOz.dJzM4QDLzcTN0czW}
 
 **Procedure**
-hacker@commands~finding-files:~$ ls
-Desktop  a
+
+
+**Code:**   
+hacker@commands~finding-files:~$ ls. 
+Desktop  a.  
 hacker@commands~finding-files:~$ ls /
-bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
-hacker@commands~finding-files:~$ ls /challenge
-DESCRIPTION.md  run
-hacker@commands~finding-files:~$ /challenge/run
-The flag is hidden (and readable) somewhere on the filesystem. Go find it!
-hacker@commands~finding-files:~$ find -name
-find: missing argument to `-name'
-hacker@commands~finding-files:~$ 
-hacker@commands~finding-files:~$ find -name flag
-hacker@commands~finding-files:~$ find / -name flag
-find: ‘/root’: Permission denied
-find: ‘/proc/1/task/1/fd’: Permission denied
-find: ‘/proc/1/task/1/fdinfo’: Permission denied
-find: ‘/proc/1/task/1/ns’: Permission denied
-find: ‘/proc/1/fd’: Permission denied
-find: ‘/proc/1/map_files’: Permission denied
-find: ‘/proc/1/fdinfo’: Permission denied
-find: ‘/proc/1/ns’: Permission denied
-find: ‘/proc/7/task/7/fd’: Permission denied
-find: ‘/proc/7/task/7/fdinfo’: Permission denied
-find: ‘/proc/7/task/7/ns’: Permission denied
-find: ‘/proc/7/fd’: Permission denied
-find: ‘/proc/7/map_files’: Permission denied
-find: ‘/proc/7/fdinfo’: Permission denied
-find: ‘/proc/7/ns’: Permission denied
-find: ‘/var/log/private’: Permission denied
+bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var.   
+hacker@commands~finding-files:~$ ls /challenge.  
+DESCRIPTION.md  run.  
+hacker@commands~finding-files:~$ /challenge/run.  
+The flag is hidden (and readable) somewhere on the filesystem. Go find it!   
+hacker@commands~finding-files:~$ find -name.   
+find: missing argument to `-name'  
+hacker@commands~finding-files:~$   
+hacker@commands~finding-files:~$ find -name flag.  
+hacker@commands~finding-files:~$ find / -name flag.  
+find: ‘/root’: Permission denied.  
+find: ‘/proc/1/task/1/fd’: Permission denied.  
+find: ‘/proc/1/task/1/fdinfo’: Permission denied.  
+find: ‘/proc/1/task/1/ns’: Permission denied.   
+find: ‘/proc/1/fd’: Permission denied.  
+find: ‘/proc/1/map_files’: Permission denied.  
+find: ‘/proc/1/fdinfo’: Permission denied.  
+find: ‘/proc/1/ns’: Permission denied   
+find: ‘/proc/7/task/7/fd’: Permission denied.  
+find: ‘/proc/7/task/7/fdinfo’: Permission denied.  
+find: ‘/proc/7/task/7/ns’: Permission denied.  
+find: ‘/proc/7/fd’: Permission denied  
+find: ‘/proc/7/map_files’: Permission denied. 
+find: ‘/proc/7/fdinfo’: Permission denied.  
+find: ‘/proc/7/ns’: Permission denied. 
+find: ‘/var/log/private’: Permission denied. 
 find: ‘/var/log/apache2’: Permission denied
 find: ‘/var/log/mysql’: Permission denied
 find: ‘/var/cache/ldconfig’: Permission denied
