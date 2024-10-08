@@ -33,7 +33,7 @@ pwn.college{EZUEWoxgeUqjOAsIidiFk9UD_cS.dVjM5QDLzcTN0czW}
 **Flag:**
 pwn.college{EEh87YDlJgMvz3DFdvbYhf10b-X.dRTM4QDLzcTN0czW}
 
-**Procedure:**
+**Procedure:**    
 I had to just read through the manual and found the argument to pass to '/challenge/challenge' in order to get the flag.
 
 **Code:**
@@ -81,7 +81,7 @@ Correct usage! Your flag: pwn.college{EEh87YDlJgMvz3DFdvbYhf10b-X.dRTM4QDLzcTN0c
 Correct usage! Your flag: pwn.college{AaekJ0fAbOk_-mJ7Ptv53WrVLsE.dVTM4QDLzcTN0czW}
 
 **Procedure**   
-YWE can scroll man pages with the arrow keys (and PgUp/PgDn) and search with /. After searching, hit n to go to the next result and N to go to the previous result. Instead of /, 
+We can scroll man pages with the arrow keys (and PgUp/PgDn) and search with /. After searching, hit n to go to the next result and N to go to the previous result. Instead of /, 
 we can use ? to search backwards. Afetr opening the manual i searched for word flag using '/flag' command and found the required argument then pressed 'q' to exit from the manual and type 
 passed the required comman to '/challenge/challenge'.
 
@@ -97,10 +97,10 @@ Correct usage! Your flag: pwn.college{AaekJ0fAbOk_-mJ7Ptv53WrVLsE.dVTM4QDLzcTN0c
 
 # 5. Searching for Manuals 
 
-**Flag:**
+**Flag:**   
 pwn.college{IKJvYWL91K_yKRiE5I-20fmIciy.dZTM4QDLzcTN0czW}
 
-**Procedure:**
+**Procedure:**      
 First I used 'man man' command to figure out which manpage to search but then I saw a bunch of commands when I search for them I got to know that command 'man -k "reqeexp" ' is used to 
 search a particular keyword in the description of manuals. I used this to search for the keyword 'challenge' and got the required manual name where I got the argument which I passed to
 '/challenge/challenge' to get the flag.
