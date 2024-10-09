@@ -7,8 +7,10 @@ pwn.college{E4LKRg0P1sE3A5BZGyvV4YOMhOJ.dFzN1QDLzcTN0czW}
 In this challenge the flag was copied in the home directory. On opening the terminal I was already in the home directory this was concluded by the symbool '~' so i had to just type 'cat flag' command and the flag was read out.
 
 **Code** <br>
+```
 hacker@commands~cat-not-the-pet-but-the-command:~$ cat flag   
 pwn.college{E4LKRg0P1sE3A5BZGyvV4YOMhOJ.dFzN1QDLzcTN0czW}
+```
 
 # 2. catting absolute path
 
@@ -19,9 +21,10 @@ pwn.college{Qdc3mxrwVLgfva4QDUVgK0D4xQT.dlTM5QDLzcTN0czW}
 In this challenge the flag is in /flag where the flag always lives in pwn.college to get it I had to just type the 'cat' and then the absolute path '/flag'.
 
 **Code:**    
+```
 hacker@commands~catting-absolute-paths:~$ cat /flag       
 pwn.college{Qdc3mxrwVLgfva4QDUVgK0D4xQT.dlTM5QDLzcTN0czW}
-
+```
 
 # 3. more catting practice
 
@@ -32,12 +35,14 @@ pwn.college{IP2KgAOUIRsc6aqw8BEFW_T0cw3.dBjM5QDLzcTN0czW}
 Here I could not use 'cd' command to enter the directory so to get the flag I had to read out the flag in the provided location, used 'cat' along with the absolute path where the flag was stored  '/usr/share/calendar/flag'.
 
 **Code**    
+```
 You cannot use the 'cd' command in this level, and must retrieve the flag by 
 absolute path. Plus, I hid the flag in a different directory! You can find it 
 in the file /usr/share/calendar/flag. Go cat it out **without** cding into that 
 directory!       
 hacker@commands~more-catting-practice:~$ cat /usr/share/calendar/flag       
 pwn.college{IP2KgAOUIRsc6aqw8BEFW_T0cw3.dBjM5QDLzcTN0czW}
+```
 
 # 4. grepping for a needle in a haystack
 
@@ -48,9 +53,10 @@ pwn.college{oypET6Dsr1PJ_oKDPoeZ13dN0a6.ddTM4QDLzcTN0czW}
  'grep' command is used to search the file for lines of text containing SEARCH_STRING and print them to the console. Here there were a hundred thousand lines of text into the /challenge/data.txt file so I used grep command to search the line which starts with 'pwn.college' as the flags have the same starting. 
 
 **Code**     
+```
 hacker@commands~grepping-for-a-needle-in-a-haystack:~$ grep pwn.college /challenge/data.txt      
 pwn.college{oypET6Dsr1PJ_oKDPoeZ13dN0a6.ddTM4QDLzcTN0czW}
-
+```
 
 # 5. listing files
 
@@ -61,6 +67,7 @@ pwn.college{EzTAXD_xTvnII7SLa_Ec08uhdMM.dhjM4QDLzcTN0czW}
 I had to use 'ls' command to list the everything in the home directory then used the same command with absolute path '/challenge' and got the renamed flag file.
 
 **Code:**         
+```
 hacker@commands~listing-files:~$ ls /    
 bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 hacker@commands~listing-files:~$ ls /challenge      
@@ -70,6 +77,7 @@ Yahaha, you found me! Here is your flag:
 pwn.college{EzTAXD_xTvnII7SLa_Ec08uhdMM.dhjM4QDLzcTN0czW}    
 hacker@commands~listing-files:~$ /flag         
 bash: /flag: Permission denied      
+```
 
 # 6. touching files
 
@@ -80,6 +88,7 @@ pwn.college{E6klr13UGhsQcQWmNnGXRzmUjNS.dBzM4QDLzcTN0czW}
 I had to creat two files named 'pwn' and 'college' in '/tmp' then executed 'run' program in 'challenge' directory.
 
 **Code:**         
+```
 hacker@commands~touching-files:~$ ls /tmp     
 bin  hsperfdata_root  tmp.XvrUsDZh8M  vscode-git-350992565c.sock  vscode-ipc-1f62b92b-07e4-4c0e-b4f4-553e3031b8b2.sock  vscode-ipc-f90f7932-33f5-4582-aba6-0b08ba2d3733.sock      
 hacker@commands~touching-files:~$ touch /tmp/pwn        
@@ -87,7 +96,7 @@ hacker@commands~touching-files:~$ touch /tmp/college
 hacker@commands~touching-files:~$ /challenge/run      
 Success! Here is your flag:       
 pwn.college{E6klr13UGhsQcQWmNnGXRzmUjNS.dBzM4QDLzcTN0czW}
-
+```
 
 # 7. removing files
 
@@ -98,6 +107,7 @@ pwn.college{M7C7ekGy8wFIyzDWQs9VvPqb2sx.dZTOwUDLzcTN0czW}
 I had to delete a file named 'delete_me' stored in home directory using 'rm' command and provided the relative path.
 
 **Code:**          
+```
 hacker@commands~removing-files:~$ ls
 Desktop  a  delete_me
 hacker@commands~removing-files:~$ ls
@@ -108,7 +118,7 @@ Desktop  a
 hacker@commands~removing-files:~$ /challenge/check
 Excellent removal. Here is your reward:
 pwn.college{M7C7ekGy8wFIyzDWQs9VvPqb2sx.dZTOwUDLzcTN0czW}
-
+```
 
 # 8. hidden files
 
@@ -119,6 +129,7 @@ pwn.college{AhEe4zGZvo1Z_HRsWHLTiOd6yZ_.dBTN4QDLzcTN0czW}
 In this challenge the flag was kept in a hidden file using '.' in the starting to list the hidden files I had to invoke ls with -a, after getting the file name I read it out using 'cat' command.  
 
 **Code:**    
+```
 hacker@commands~hidden-files:~$ ls     
 Desktop  a   
 hacker@commands~hidden-files:~$ cd /    
@@ -128,9 +139,9 @@ hacker@commands~hidden-files:/$ ls -a
 .  ..  .dockerenv  .flag-24604320419474  bin  boot  challenge  dev  etc  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var      
 hacker@commands~hidden-files:/$ cat .flag-24604320419474            
 pwn.college{AhEe4zGZvo1Z_HRsWHLTiOd6yZ_.dBTN4QDLzcTN0czW}
+```
 
-
-# # 9. AN Epic Filesystem Quest
+# 9. AN Epic Filesystem Quest
 
 **Flag**      
 pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
@@ -139,6 +150,7 @@ pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
 In this challenge the was a huge file system in which I listed different files and directories to find the first clue after that I follow the clues which led to flag.
 
 **Code:**    
+```
 hacker@commands~an-epic-filesystem-quest:~$ cd /     
 hacker@commands~an-epic-filesystem-quest:/$ ls       
 INSIGHT  bin  boot  challenge  dev  etc  flag  home  lib  lib32  lib64  libx32  media  mnt  nix  opt  proc  root  run  sbin  srv  sys  tmp  usr  var     
@@ -255,6 +267,7 @@ BRIEF  cpu_loop.c  signal.c  sockbits.h  syscall_nr.h  target_cpu.h  target_elf.
 hacker@commands~an-epic-filesystem-quest:/opt/aflplusplus/nyx_mode/QEMU-Nyx/linux-user/alpha$ cat BRIEF          
 CONGRATULATIONS! Your perserverence has paid off, and you have found the flag!           
 It is: pwn.college{gwmoMPtH9ZPhw_sNVYLWjNFIedH.dljM4QDLzcTN0czW}
+```
 
 # 10. making directories
 
@@ -265,6 +278,7 @@ pwn.college{krLrsjNDLCHYFpHUS96nA9epr63.dFzM4QDLzcTN0czW}
 I had to make a directory whose absolute path was '/tmp/pwn' and make a file college in it then run '/challlenge/run' which check my solution and gave me the flag.
 
 **Code:**   
+```
 hacker@commands~making-directories:~$ mkdir /tmp/pwn.   
 hacker@commands~making-directories:~$ ls /tmp.     
 bin  hsperfdata_root  pwn  tmp.XvrUsDZh8M  vscode-git-7afde2b337.sock  vscode-ipc-4c74aabe-d87d-4e4e-a39a-f4bd91da2e8e.sock  vscode-ipc-a2914e18-da9e-4775-a57a-8a34b6906e99.sock.    
@@ -277,6 +291,7 @@ hacker@commands~making-directories:/tmp/pwn$ touch college.
 hacker@commands~making- directories:/tmp/pwn$ /challenge/run.   
 Success! Here is your flag:    
 pwn.college{krLrsjNDLCHYFpHUS96nA9epr63.dFzM4QDLzcTN0czW}
+```
 
 # 11. Finding files
 
@@ -287,6 +302,7 @@ pwn.college{Y2DotLqEdoUSSlfVBJmuylV9EOz.dJzM4QDLzcTN0czW}
 Here I learned how to use find command. All the flags start with 'pwn.college' so i had to just find the file that started with this but there were a number of files so I had to read them using cat command and find my flag.
 
 **Code:**    
+```
 hacker@commands~finding-files:~$ ls.   
 Desktop  a.   
 hacker@commands~finding-files:~$ ls /   
@@ -428,6 +444,7 @@ hacker@commands~finding-files:/usr/local/lib/python3.8/dist-packages/pwnlib/flag
 cat: /usr/local/share/radare2/5.9.5/flag: Is a directory            
 hacker@commands~finding-files:/usr/local/lib/python3.8/dist-packages/pwnlib/flag$ cat /usr/share/racket/collects/ffi/unsafe/private/flag           
 pwn.college{Y2DotLqEdoUSSlfVBJmuylV9EOz.dJzM4QDLzcTN0czW}          
+```
 
 # 12. linking files
 
@@ -438,6 +455,7 @@ pwn.college{EzDshxIRwlyqmvqYRF6zvVVAZ8W.dlTM1UDLzcTN0czW}
 This challlenge introduced me about linker. Here flag was in /flag but but /challenge/catflag will instead read out /home/hacker/not-the-flag so inorder to fool it I tried linking the not-flag-file to flag file but it showed 'file exists' so I first deleted the not-the-flag file and and created it again and linked it to /flag file so when i use '/challenge/catflag' them it read out not-the-flag which in turn game me the flag.
 
 **Code:**    
+```
 hacker@commands~linking-files:~$ cat /challenge/catflag       
 #!/opt/pwn.college/bash           
 
@@ -480,4 +498,5 @@ hacker@commands~linking-files:~$ ls
 hacker@commands~linking-files:~$ ln -s /flag /home/hacker/not-the-flag             
 hacker@commands~linking-files:~$ /challenge/catflag         
 About to read out the /home/hacker/not-the-flag file!            
-pwn.college{EzDshxIRwlyqmvqYRF6zvVVAZ8W.dlTM1UDLzcTN0czW}                 
+pwn.college{EzDshxIRwlyqmvqYRF6zvVVAZ8W.dlTM1UDLzcTN0czW}
+```          
