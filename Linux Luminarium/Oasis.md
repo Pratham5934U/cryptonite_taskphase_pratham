@@ -18,4 +18,4 @@ Attachment: https://drive.proton.me/urls/NMT01V9DBW#zn1evKwtdD4y
 * Gathered some information about this new command from the page link given below.
   Source: https://www.geeksforgeeks.org/chmod-command-linux/
 * Ater using the command as required I got the following output -
-  ![OUTPUT]()
+  ![OUTPUT](https://github.com/Pratham5934U/cryptonite_taskphase_pratham/blob/main/Linux%20Luminarium/crypt.png)
