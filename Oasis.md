@@ -13,9 +13,17 @@ Attachment: https://drive.proton.me/urls/NMT01V9DBW#zn1evKwtdD4y
    pratham@LAPTOP-SDGL4LEJ:~$ ./game
    -bash: ./game: Permission denied
    ```
-* Again on searching about this issue on net I came across a new command "chmod +x [filename]"     
+* Again on searching about this issue on net I came across a new command "chmod +x [filename]"         
    Source: https://stackoverflow.com/questions/40458246/how-do-i-run-an-extensionless-maybe-elf-file-on-ubuntu    
 * Gathered some information about this new command from the page link given below.
   Source: https://www.geeksforgeeks.org/chmod-command-linux/
 * Ater using the command as required I got the following output -
-  ![OUTPUT](https://github.com/Pratham5934U/cryptonite_taskphase_pratham/blob/main/Linux%20Luminarium/crypt.png)
+  ![OUTPUT](https://github.com/Pratham5934U/cryptonite_taskphase_pratham/blob/main/Linux%20Luminarium/crypt.png)    
+* Next I tried zooming out focusing on specific colors mentally trying to figure out some clue but I was unable to found out any clue. I also tried executing it again and agin trying to
+  get hold on to some pattern but the colours were random and I could not draw any conclusion.
+* Then I thought of getting some codes out of these colours might help and in order to do so I found out that I could copy the colors and each one of them had a particular set of characters.
+* After decoding text I got 79 65 83 73 83 123 118 51 52 121 95 102 52 110 99 121 95 65 78 53 73 125 which seemed to be decimal ASCII values.
+* *After converting these ASCII value to text I got the flag.
+
+  **Flag:**    
+  OASIS{v34y_f4ncy_AN5I}
