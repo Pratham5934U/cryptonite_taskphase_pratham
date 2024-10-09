@@ -17,4 +17,5 @@ Attachment: https://drive.proton.me/urls/NMT01V9DBW#zn1evKwtdD4y
    Source: https://stackoverflow.com/questions/40458246/how-do-i-run-an-extensionless-maybe-elf-file-on-ubuntu    
 * Gathered some information about this new command from the page link given below.
   Source: https://www.geeksforgeeks.org/chmod-command-linux/
-* 
+* Ater using the command as required I got the following output -
+  ![OUTPUT]()
