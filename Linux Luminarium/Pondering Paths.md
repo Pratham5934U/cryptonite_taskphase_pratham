@@ -24,6 +24,7 @@ On typing this absolute path and after pressing enter I got the flag.
 pwn.college{8BiogCA4DND03vYoxftO8RNiwCD.dZDN1QDLzcTN0czW}
 
 **Procedure:**
+```
 hacker@paths~position-thy-self:~$ cd /challenge
 hacker@paths~position-thy-self:/challenge$ cd /run
 hacker@paths~position-thy-self:/run$ /
@@ -44,6 +45,7 @@ Correct!!!
 Here is your flag:
 pwn.college{8BiogCA4DND03vYoxftO8RNiwCD.dZDN1QDLzcTN0czW}
 hacker@paths~position-thy-self:/home$ 
+```
 
 # 4. Position elsewhere
 
@@ -51,6 +53,7 @@ hacker@paths~position-thy-self:/home$
 pwn.college{EaUc5PdvPsY-4EZFy68M7oL0NbJ.ddDN1QDLzcTN0czW}
 
 **Procedure**
+```
 hacker@paths~position-elsewhere:~$ /challenge/run
 Incorrect...
 You are not currently in the /home directory.
@@ -62,6 +65,7 @@ Correct!!!
 Here is your flag:
 pwn.college{EaUc5PdvPsY-4EZFy68M7oL0NbJ.ddDN1QDLzcTN0czW}
 hacker@paths~position-elsewhere:/home$ 
+```
 
 # 5. Position yet elsewhere
 
@@ -69,6 +73,7 @@ hacker@paths~position-elsewhere:/home$
 pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
 
 **Procedure**
+```
 hacker@paths~position-yet-elsewhere:~$ /challenge/run
 Incorrect...
 You are not currently in the /usr/share/zoneinfo/posix/Asia directory.
@@ -88,7 +93,7 @@ Correct!!!
 /challenge/run is an absolute path, invoked from the right directory!
 Here is your flag:
 pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
-
+```
 
 
 
@@ -98,6 +103,7 @@ pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
 pwn.college{UcArH4H40TVR4n0tEVbUsptpJaJ.dlDN1QDLzcTN0czW}
 
 **Procedure**
+```
 hacker@paths~implicit-relative-paths-from-:~$ cd /
 hacker@paths~implicit-relative-paths-from-:/$ c
 bash: c: command not found
@@ -111,6 +117,7 @@ challenge/run is a relative path, invoked from the right directory!
 Here is your flag:
 pwn.college{UcArH4H40TVR4n0tEVbUsptpJaJ.dlDN1QDLzcTN0czW}
 hacker@paths~implicit-relative-paths-from-:/$ 
+```
 
 # 7. Explicit relative paths, from /
 
@@ -118,19 +125,22 @@ hacker@paths~implicit-relative-paths-from-:/$
 pwn.college{8R_JKEZy5B4oX7Dapsw8_JzfIdi.dBTN1QDLzcTN0czW}
 
 **Procedure**
+```
 hacker@paths~explicit-relative-paths-from-:~$ cd /
 hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run
 Correct!!!
 ./challenge/run is a relative path, invoked from the right directory!
 Here is your flag:
 pwn.college{8R_JKEZy5B4oX7Dapsw8_JzfIdi.dBTN1QDLzcTN0czW}
+```
 
 # 8. Implicit relative path
 
 **Flag**
 pwn.college{0KVWhfIpbvCE8jGs1-2W301Okrj.dFTN1QDLzcTN0czW}
 
-**Procedure**
+**Procedure** 
+```
 hacker@paths~implicit-relative-path:~$ cd /challenge
 hacker@paths~implicit-relative-path:/challenge$ run
 bash: run: command not found
@@ -139,6 +149,7 @@ Correct!!!
 ./run is a relative path, invoked from the right directory!
 Here is your flag:
 pwn.college{0KVWhfIpbvCE8jGs1-2W301Okrj.dFTN1QDLzcTN0czW}
+```
 
 # 9. Home sweet home
 
@@ -146,6 +157,7 @@ pwn.college{0KVWhfIpbvCE8jGs1-2W301Okrj.dFTN1QDLzcTN0czW}
 pwn.college{87ehKGMg_Rinjv-YdEChtrAdkoR.dNzM4QDLzcTN0czW}
 
 **Procedure**
+```
 hacker@paths~home-sweet-home:~$ /challenge/run
 You must provide an argument to /challenge/run when you invoke it!
 hacker@paths~home-sweet-home:~$ /challenge/run ~/copy
@@ -158,7 +170,7 @@ hacker@paths~home-sweet-home:~$ /challenge/run ~/a
 Writing the file to /home/hacker/a!
 ... and reading it back to you:
 pwn.college{87ehKGMg_Rinjv-YdEChtrAdkoR.dNzM4QDLzcTN0czW}
-
+```
 
 
 
