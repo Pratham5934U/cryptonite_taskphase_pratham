@@ -27,11 +27,15 @@ size 1033 bytes and found only one file used `cat` to get the password.
 Password: HWasnPhtq9AVKe0dmk45nxy20cvUa6EG
 
 ## level 6 &#8594; level 7
-
+Used `find ~ -user bandit7 -group bandit6 -size 33c` to search then file with exact same properties and in the whole list of files which I got there was only one file whose permission was not denied and this was the file which contain the password.
+Password: morbNTDkSW6jIlUc0ymOdMaLnOlFVAaj
 
 ## level 7 &#8594; level 8
-
-
+First I founnd out the location of file using `find` then I tried to `cat` it and it was too long to find that specific word so to find out that specific word I used `grep` command and Got the password 
+```bash
+bandit7@bandit:~$ grep "millionth" data.txt
+millionth       dfwvzFQi4mU0wfNbFOe9RoWskMLg7eEc
+```
 
 ## level 8 &#8594; level 9
 
