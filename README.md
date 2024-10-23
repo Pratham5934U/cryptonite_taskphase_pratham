@@ -7,7 +7,7 @@
 - [**Comprehending Commands**](./Linux_Luminarium/Comprehending_Commands.md)
 - [**Digesting Documentation**](./Linux_Luminarium/Digesting_Documentation.md)
 - [**File Globbing**](./Linux_Luminarium/File_Globbing.md)
-- [**Practicing Piping**](./Linux_Luminarium/Practicing_Piping)
+- [**Practicing Piping**](./Linux_Luminarium/Practicing_Piping.md)
 
 
 ## Day 11-20
