@@ -1,4 +1,4 @@
-![Cryptonite Taskphase](./Images/Cryptonite.jpg)
+![Cryptonite Taskphase](./Images/Crypto.gif)
 
 ## Day 1-10
 
