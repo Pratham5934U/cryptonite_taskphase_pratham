@@ -7,7 +7,7 @@ pwn.college{ErPjiMrHesjXWkhKJLX2-D4Wdwt.dVTN0UDLzcTN0czW}
 In this challenge I had to switch to root using su command and password in order to read out /flag .
 
 **Code:**        
-```
+```bash
 hacker@users~becoming-root-with-su:~$ su
 Password: 
 root@users~becoming-root-with-su:/home/hacker# cat /flag
@@ -23,7 +23,7 @@ pwn.college{wvhX4zYMsKEU8-Wgyhb-LwHNgUs.dZTN0UDLzcTN0czW}
 I had to provide user name to su and provide password to switch to zardus and then run /challenge/run .
 
 **Code:**        
-```
+```bash
 hacker@users~other-users-with-su:~$ su zardus
 Password: 
 zardus@users~other-users-with-su:/home/hacker$ /challenge/run
@@ -41,7 +41,7 @@ Here I first cracked the password using John the Ripper from the leak of /etc/sh
 to get the flag.
 
 **Code:**        
-```
+```bash
 hacker@users~cracking-passwords:~$ john /challenge/shadow-leak
 Loaded 1 password hash (crypt, generic crypt(3) [?/64])
 Press 'q' or Ctrl-C to abort, almost any other key for status
@@ -65,7 +65,7 @@ pwn.college{wk7j7rmo1kSiBCh0QH9TS8e-thS.dhTN0UDLzcTN0czW}
 Here I used sudo command which allowed me to read /flag in root.
 
 **Code:**        
-```
+```bash
 hacker@users~using-sudo:~$ sudo cat /flag
 pwn.college{wk7j7rmo1kSiBCh0QH9TS8e-thS.dhTN0UDLzcTN0czW}
 ```

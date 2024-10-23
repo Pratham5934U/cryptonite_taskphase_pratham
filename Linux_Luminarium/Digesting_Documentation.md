@@ -7,7 +7,7 @@ pwn.college{MyfvzKKb6HCumPGW9fyj9R-m9s2.dRjM5QDLzcTN0czW}
 I just had to pass a argument '--giveflag'.
 
 **Code:** 
-```
+```bash
 hacker@man~learning-from-documentation:~$ /challenge/challenge --giveflag        
 Correct argument! Here is your flag:         
 pwn.college{MyfvzKKb6HCumPGW9fyj9R-m9s2.dRjM5QDLzcTN0czW}
@@ -22,7 +22,7 @@ pwn.college{EZUEWoxgeUqjOAsIidiFk9UD_cS.dVjM5QDLzcTN0czW}
 Here i had to pass two arguments to /challenge/challenge that were '--printfile' and '/flag' this was to specify the particular file.
 
  **Code:**     
-```
+```bash
 hacker@man~learning-complex-usage:~$ /challenge/challenge  --printfile /flag        
 Correct argument! Here is the /flag file:       
 pwn.college{EZUEWoxgeUqjOAsIidiFk9UD_cS.dVjM5QDLzcTN0czW}
@@ -37,7 +37,7 @@ pwn.college{EEh87YDlJgMvz3DFdvbYhf10b-X.dRTM4QDLzcTN0czW}
 I had to just read through the manual and found the argument to pass to '/challenge/challenge' in order to get the flag.
 
 **Code:**
-```
+```bash
 hacker@man~reading-manuals:~$ man challenge
 
 CHALLENGE(1)                                                                                     Challenge Commands                                                                                     CHALLENGE(1)
@@ -86,7 +86,7 @@ we can use ? to search backwards. Afetr opening the manual i searched for word f
 passed the required comman to '/challenge/challenge'.
 
 **Code:**
-```
+```bash
 hacker@man~searching-manuals:~$ man challenge
 hacker@man~searching-manuals:~$ 
 hacker@man~searching-manuals:~$ 
@@ -108,7 +108,7 @@ search a particular keyword in the description of manuals. I used this to search
 Source : https://docs.oracle.com/cd/E23824_01/html/821-1451/gkyre.html#:~:text=To%20search%20a%20specific%20man,%2Dk%20or%20%2DK%20option.&text=Note%20%2D%20Keywords%20are%20contained%20within%20double%20quotation%20marks.
 
 **Code:**
-```
+```bash
 acker@man~searching-for-manuals:~$ man man
 MAN(1)                                                                                           Manual pager utils                                                                                           MAN(1)
 
@@ -180,7 +180,7 @@ Some programs don't have a man page, but might tell you how to run them if invok
 so I was able to get knowledge about more argumnets which helped my way to flag.
 
 **Code:**     
-```
+```bash
 hacker@man~helpful-programs:~$ /challenge/challenge --help
 usage: a challenge to make you ask for help [-h] [--fortune] [-v] [-g GIVE_THE_FLAG] [-p]
 
@@ -210,7 +210,7 @@ to lookup its help to figure out the secret value to pass to it! So first I pass
 to get the flag.
 
 **Code:**  
-```
+```bash
 hacker@man~help-for-builtins:~$ help challenge
 challenge: challenge [--fortune] [--version] [--secret SECRET]
     This builtin command will read you the flag, given the right arguments!

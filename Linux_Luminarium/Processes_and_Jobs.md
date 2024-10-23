@@ -8,7 +8,7 @@ In this challenge /challenge/run was renamed to a random filename and I could no
 and relaunch it directly for the flag so I got the running process list using ps -ef and found the renamed file and ran it to get the flag.
 
 **Code:**    
-```
+```bash
 hacker@processes~listing-processes:~$ ps -ef
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 20:28 ?        00:00:00 /sbin/docker-init -- /nix/var/nix/profiles/default/bin/dojo-init /run/dojo/bin/sleep 6h
@@ -36,7 +36,7 @@ pwn.college{UAK-dW6BJpzzrejFggOeHotj5ev.dJDN4QDLzcTN0czW}
 First I found out dont_run processs using 'ps -ef | grep /challenge/dont_run' then to terminate it I used 'kill' .
 
 **Code:**   
-```
+```bash
 hacker@processes~killing-processes:~$ ps -ef | grep /challenge/dont_run
 hacker        73      71  0 21:22 ?        00:00:00 /challenge/dont_run
 hacker       384     223  0 21:22 pts/1    00:00:00 grep --color=auto /challenge/dont_run
@@ -57,7 +57,7 @@ pwn.college{sjyBJ9WI2c2gNwUYWBqfPm5Nply.dNDN4QDLzcTN0czW}
 In this challenge i had to interrupt the process run using Ctrl+c .
 
 **Code:**       
-```
+```bash
 hacker@processes~interrupting-processes:~$ /challenge/run
 I could give you the flag... but I won't, until this process exits. Remember, 
 you can force me to exit with Ctrl-C. Try it now!
@@ -75,7 +75,7 @@ pwn.college{s75Z7QOroF20Umfw_4C1GYR15xE.dVDN4QDLzcTN0czW}
 I had to first run /challenge/run then suspend it in the background so that when I run it again it can see it's copy running and give the flag.
 
 **Code:**        
-```
+```bash
 hacker@processes~suspending-processes:~$ /challenge/run
 I'll only give you the flag if there's already another copy of me running in 
 this terminal... Let's check!
@@ -113,7 +113,7 @@ pwn.college{8zoVnCroHpEpdp0B-ivVGV0V_wm.dZDN4QDLzcTN0czW}
 Here I had to first run /challenge/run then suspend it in the background using Ctrl+z and then resume it using fg .
 
 **Code:**
-```
+```bash
 hacker@processes~resuming-processes:~$ /challenge/run
 Let's practice resuming processes! Suspend me with Ctrl-Z, then resume me with 
 the 'fg' command! Or just press Enter to quit me!
@@ -137,7 +137,7 @@ pwn.college{sHMcBvGJDYlYMx_sYz0Bzi7Hmw2.ddDN4QDLzcTN0czW}
 Here I first ran /challenge/run then suspended it in the background then resumed it after that ran another run so I could get the flag.
 
 **Code:**     
-```
+```bash
 hacker@processes~backgrounding-processes:~$ /challenge/run
 I'll only give you the flag if there's already another copy of me running *and 
 not suspended* in this terminal... Let's check!
@@ -186,7 +186,7 @@ pwn.college{Aao3M4-lJvJZZfZXWdRLB_Ero65.dhDN4QDLzcTN0czW}
 This challenge required me to run /challenge/run then suspend it resume it in background using bg and finally foreground it using fg .
 
 **Code:**    
-```
+```bash
 hacker@processes~foregrounding-processes:~$ /challenge/run
 To pass this level, you need to suspend me, resume the suspended process in the 
 background, and *then* foreground it without re-suspending it! You can 
@@ -219,7 +219,7 @@ pwn.college{siFR9tTn4opoNJpztCMmvzvMPKl.dlDN4QDLzcTN0czW}
 Here I had to just start the function right backgrounded.
 
 **Code:**      
-```
+```bash
 hacker@processes~starting-backgrounded-processes:~$ /challenge/run &
 [1] 399
 hacker@processes~starting-backgrounded-processes:~$ 
@@ -241,7 +241,7 @@ pwn.college{Q0E1YYvqc2zJhbNj_M3bEO2awNC.dljN4UDLzcTN0czW}
 Here I had to run /challenge/get-code then use the code which I got from it and use it as instructed to get the flag.
 
 **Code:**   
-```
+```bash
 hacker@processes~process-exit-codes:~$ ps -ef
 UID          PID    PPID  C STIME TTY          TIME CMD
 root           1       0  0 22:22 ?        00:00:00 /sbin/docker-init -- /nix/var/nix/profiles/default/bin/dojo-init /run/dojo/bin/sleep 6h

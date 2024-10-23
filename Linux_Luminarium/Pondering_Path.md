@@ -7,7 +7,7 @@ pwn.college{k323Uia1QoHJqUHim2OGCJqTAEv.dZzNwUDLzcTN0czW}
 In this challenge after printing the variable I tried figuring out the statements which I could remove so that I can get the flag after some time figured out that PATH="" and I got the flag.
 
 **Code:**        
-```
+```bash
 hacker@path~the-path-variable:~$ echo $PATH
 /nix/store/3v4hdb2gmpj7jv2z848ikakhzl9rjgwh-code-server/libexec/code-server/lib/vscode/bin/remote-cli:/run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 hacker@path~the-path-variable:~$ PATH=""
@@ -27,7 +27,7 @@ pwn.college{E75b31C41bvQ90hhBuETtYBrVa1.dVzNyUDLzcTN0czW}
 In this challenge I had to overwrite PATH with /challenge/more_commands/ so that on running /challenge/run the win command can be invoked using it's bare name.
 
 **Code:**        
-```
+```bash
 hacker@path~setting-path:~$ echo $PATH
 /nix/store/3v4hdb2gmpj7jv2z848ikakhzl9rjgwh-code-server/libexec/code-server/lib/vscode/bin/remote-cli:/run/challenge/bin:/run/workspace/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
 hacker@path~setting-path:~$ PATH=/challenge/more_commands/
@@ -46,7 +46,7 @@ pwn.college{Ib2vNryw0PA2tn-NfFgYJnWQDQ0.dZzNyUDLzcTN0czW}
 Here first I found the location of cat then made the win command and wrote the location of cat in it then made it executable and then ran /challenge/run.
 
 **Code:**        
-```
+```bash
 hacker@path~adding-commands:~$ find / -name cat
 find: ‘/root’: Permission denied
 find: ‘/proc/1/task/1/fd’: Permission denied
@@ -147,7 +147,7 @@ First I had to find the location of cat then created rm command and added in it 
 required then execute /challenge/run.
 
 **Code:**        
-```
+```bash
 hacker@path~hijacking-commands:~$ find / -name cat
 find: ‘/root’: Permission denied
 find: ‘/proc/1/task/1/fd’: Permission denied

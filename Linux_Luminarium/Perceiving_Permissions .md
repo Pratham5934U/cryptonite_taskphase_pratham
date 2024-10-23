@@ -6,7 +6,7 @@ pwn.college{wSEdY-LnevQ_fuUN-756BW1fWYo.dFTM2QDLzcTN0czW}
 **Procedure:**    
 I first used chown command to change the owner of /flag file and then read it out using cat command.
 **Code:** 
-```
+```bash
 hacker@permissions~changing-file-ownership:~$ chown hacker /flag
 hacker@permissions~changing-file-ownership:~$ cat /flag
 pwn.college{wSEdY-LnevQ_fuUN-756BW1fWYo.dFTM2QDLzcTN0czW}
@@ -21,7 +21,7 @@ pwn.college{cofs8mOEUbBLDROXZ3rA8ROsdSQ.dFzNyUDLzcTN0czW}
 In this challenge I had to just change the group owership of /flag to hacker and then read it.
 
 **Code:**      
-```
+```bash
 hacker@permissions~groups-and-files:~$ ls -l
 total 44
 -rw-r--r-- 1 hacker hacker    0 Oct  9 13:36  COLLEGE
@@ -52,7 +52,7 @@ pwn.college{AdDS0tY0lnt5M7SCHZWWVATAQu-.dJzNyUDLzcTN0czW}
 First I had to find my group usind id command and then change group of /flag to that group and then read out /flag.
 
 **Code:**      
-```
+```bash
 hacker@permissions~fun-with-groups-names:~$ id
 uid=1000(hacker) gid=1000(grp13746) groups=1000(grp13746)
 hacker@permissions~fun-with-groups-names:~$ chgrp grp13746 /flag
@@ -69,7 +69,7 @@ pwn.college{Exp6ZO-PKyD0i4FJv6ws3cvucd1.dNzNyUDLzcTN0czW}
 I used 'chmod' (change mode) to change the permissions and got the permissions to read all the files in the current directory and then read out the flag using 'cat' .
 
 **Code:**      
-```
+```bash
 hacker@permissions~changing-permissions:~$ chmod +r /flag
 hacker@permissions~changing-permissions:~$ cat /flag
 pwn.college{Exp6ZO-PKyD0i4FJv6ws3cvucd1.dNzNyUDLzcTN0czW}
@@ -84,7 +84,7 @@ pwn.college{sm9AClOvRafDP7ketZvDEfqjUDR.dJTM2QDLzcTN0czW}
 Here I just changed the permission and got the executable permission of /challenge/run program using chmod and executed it to get the flag.
 
 **Code:**      
-```
+```bash
 hacker@permissions~executable-files:~$ chmod +x /challenge/run
 hacker@permissions~executable-files:~$ /challenge/run
 Successful execution! Here is your flag:
@@ -100,7 +100,7 @@ pwn.college{0ciSLPTEHi776sU6wVxywWOky09.dBTM2QDLzcTN0czW}
 This challenge consisted of 8 rounds I had to follow the instructions and change the permissions as required using chmod command to get the flag.
 
 **Code:**      
-```
+```bash
 hacker@permissions~permission-tweaking-practice:~$ /challenge/run
 Round 0 (of 8)!
 
@@ -330,7 +330,7 @@ pwn.college{M3S_fFaxhO652D5o-DxSxHW3DXI.dNTM5QDLzcTN0czW}
 This was similar to last challenge except this time I required the use of '=' alot to make work easier.
 
 **Code:**      
-```
+```bash
 hacker@permissions~permissions-setting-practice:~$ /challenge/run
 Round 0 (of 8)!
 
@@ -560,7 +560,7 @@ pwn.college{sPxh4Jgc_sIlY3C92u32qYy13-o.dNTM2QDLzcTN0czW}
 Here to get the flag I had to add the SUID bit to the /challenge/getroot program in order to spawn a root shell to cat the flag. 
 
 **Code:**      
-```
+```bash
 hacker@permissions~the-suid-bit:~$ chmod u+s /challenge/getroot
 hacker@permissions~the-suid-bit:~$ /challenge/getroot
 SUCCESS! You have set the suid bit on this program, and it is running as root! 

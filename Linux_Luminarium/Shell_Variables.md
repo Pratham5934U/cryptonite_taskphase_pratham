@@ -7,7 +7,7 @@ pwn.college{0s4VsuvbJB45omlwk-poriFOtq6.ddTN1QDLzcTN0czW}
 In this challenge the flag was put into the variable called "FLAG"  I had to read it out using 'echo' .
 
 **Code:**   
-```
+```bash
 hacker@variables~printing-variables:~$ echo $FLAG
 pwn.college{0s4VsuvbJB45omlwk-poriFOtq6.ddTN1QDLzcTN0czW}
 ```
@@ -22,7 +22,7 @@ In this challenge I had to set the PWN variable to the value COLLEGE keeping in 
 use 'PWN=COLLEGE' .
 
 **Code:**      
-```
+```bash
 hacker@variables~setting-variables:~$ PWN=COLLEGE
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{cNpseWN4tTPfVAOJd3RlaEbwLrn.dlTN1QDLzcTN0czW}
@@ -37,7 +37,7 @@ pwn.college{Agu8AWxGntFjOvCp9dMBf7oxCih.dBjN1QDLzcTN0czW}
 In this challenge I had to set the variable PWN to COLLEGE YEAH, since there was space in between COLLEGE and YEAh so I had to quote them.
 
 **Code:**       
-```
+```bash
 hacker@variables~multi-word-variables:~$ PWN="COLLEGE YEAH"
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{Agu8AWxGntFjOvCp9dMBf7oxCih.dBjN1QDLzcTN0czW}
@@ -52,7 +52,7 @@ pwn.college{wEhfwbN9FLR_0w8olV-lvOC5XfV.dJjN1QDLzcTN0czW}
 Here I first set the value of PWN to COLLEGE and then exported it after that I set the value of COLLEGE to PWN and then run then command /challenge/run .
 
 **Code:**   
-```
+```bash
 hacker@variables~exporting-variables:~$ PWN=COLLEGE
 You've set the PWN variable to the proper value!
 hacker@variables~exporting-variables:~$ export PWN
@@ -78,7 +78,7 @@ pwn.college{g8tMjtyNtnfC7EickZ0n1rAR5qm.dhTN1QDLzcTN0czW}
 I had to just use 'env' commmand which printed all the exported variables and I found out the flag from it.
 
 **Code:** 
-```
+```bash
 hacker@variables~printing-exported-variables:~$ env
 SHELL=/run/dojo/bin/bash
 COLORTERM=truecolor
@@ -118,7 +118,7 @@ pwn.college{IYnJmBoOkMi7lCc9JRhX8uSijwL.dVzN0UDLzcTN0czW}
 In this challenge read the output of the /challenge/run command directly into a variable called PWN and then read it out using 'echo' .
 
 **Code:** 
-```
+```bash
 hacker@variables~storing-command-output:~$ PWN=$(/challenge/run)
 Congratulations! You have read the flag into the PWN variable. Now print it out 
 and submit it!
@@ -135,7 +135,7 @@ pwn.college{A4Zm3Fu88q5PKuXy4UTTLEVjeku.dhzN1QDLzcTN0czW}
 This challenge required me to set the value of variable PWN to COLLEGE from user using read command.
 
 **Code:**   
-```
+```bash
 hacker@variables~reading-input:~$ read -p "PWN=" PWN
 PWN=COLLEGE
 You've set the PWN variable properly! As promised, here is the flag:
@@ -151,7 +151,7 @@ pwn.college{cZT3oP15qGxkZ1bXyqp7j-qa91R.dBjM4QDLzcTN0czW}
 Here I just redirected the contents in /challenge/read_me to PWN variable using read and I got the flag.
 
 **Code:**     
-```
+```bash
 hacker@variables~reading-files:~$ read PWN < /challenge/read_me
 You've set the PWN variable properly! As promised, here is the flag:
 pwn.college{cZT3oP15qGxkZ1bXyqp7j-qa91R.dBjM4QDLzcTN0czW}

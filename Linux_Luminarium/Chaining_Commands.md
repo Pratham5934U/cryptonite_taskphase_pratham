@@ -7,7 +7,7 @@ pwn.college{osNB4N9lWjFGtuXpBJZcbpTLRfJ.dVTN4QDLzcTN0czW}
 I used ' ; ' to chain the execution statement of pwn and college in challenge.
 
 **Code:**           
-```
+```bash
 hacker@chaining~chaining-with-semicolons:~$ /challenge/pwn; /challenge/college
 Yes! You chained /challenge/pwn and /challenge/college! Here is your flag:
 pwn.college{osNB4N9lWjFGtuXpBJZcbpTLRfJ.dVTN4QDLzcTN0czW}
@@ -22,7 +22,7 @@ pwn.college{wd-RSiCT6jCcHQ6AN2eM8v99fge.dFzN4QDLzcTN0czW}
 Here I struggled a little in getting it that I had to use to write the execution statements in shell script x.sh and then I used bash x.sh to run it and get the flag.
 
 **Code:**           
-```
+```bash
 hacker@chaining~your-first-shell-script:~$ nano x.sh
 hacker@chaining~your-first-shell-script:~$ bash x.sh
 Great job, you've written your first shell script! Here is the flag:
@@ -38,7 +38,7 @@ pwn.college{YgAddJzJwz1RfLil4v9Nrx2inU8.dhTM5QDLzcTN0czW}
 Here first I created and edited the shell script p.sh and wrote the commands '/challenge/pwn' and '/challenge/college' and then piped the output to /challenge/solve.
 
 **Code:**           
-```
+```bash
 hacker@chaining~redirecting-script-output:~$ nano p.sh
 hacker@chaining~redirecting-script-output:~$ bash p.sh | /challenge/solve 
 Correct! Here is your flag:
@@ -55,7 +55,7 @@ This challenge required me to creat a shell script with /challenge/solve in it s
 the script executable using chmod command and then executed it using it's relative path.
 
 **Code:**           
-```
+```bash
 hacker@chaining~executable-shell-scripts:~$ nano p.sh
 hacker@chaining~executable-shell-scripts:~$ chmod +x p.sh
 hacker@chaining~executable-shell-scripts:~$ ./p.sh

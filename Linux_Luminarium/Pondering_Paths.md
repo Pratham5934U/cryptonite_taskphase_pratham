@@ -24,7 +24,7 @@ On typing this absolute path and after pressing enter I got the flag.
 pwn.college{8BiogCA4DND03vYoxftO8RNiwCD.dZDN1QDLzcTN0czW}
 
 **Procedure:**
-```
+```bash
 hacker@paths~position-thy-self:~$ cd /challenge
 hacker@paths~position-thy-self:/challenge$ cd /run
 hacker@paths~position-thy-self:/run$ /
@@ -53,7 +53,7 @@ hacker@paths~position-thy-self:/home$
 pwn.college{EaUc5PdvPsY-4EZFy68M7oL0NbJ.ddDN1QDLzcTN0czW}
 
 **Procedure**
-```
+```bash
 hacker@paths~position-elsewhere:~$ /challenge/run
 Incorrect...
 You are not currently in the /home directory.
@@ -73,7 +73,7 @@ hacker@paths~position-elsewhere:/home$
 pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
 
 **Procedure**
-```
+```bash
 hacker@paths~position-yet-elsewhere:~$ /challenge/run
 Incorrect...
 You are not currently in the /usr/share/zoneinfo/posix/Asia directory.
@@ -103,7 +103,7 @@ pwn.college{QFw6dbIXu-VcTb8eX1pV3hSjW2_.dhDN1QDLzcTN0czW}
 pwn.college{UcArH4H40TVR4n0tEVbUsptpJaJ.dlDN1QDLzcTN0czW}
 
 **Procedure**
-```
+```bash
 hacker@paths~implicit-relative-paths-from-:~$ cd /
 hacker@paths~implicit-relative-paths-from-:/$ c
 bash: c: command not found
@@ -125,7 +125,7 @@ hacker@paths~implicit-relative-paths-from-:/$
 pwn.college{8R_JKEZy5B4oX7Dapsw8_JzfIdi.dBTN1QDLzcTN0czW}
 
 **Procedure**
-```
+```bash
 hacker@paths~explicit-relative-paths-from-:~$ cd /
 hacker@paths~explicit-relative-paths-from-:/$ ./challenge/run
 Correct!!!
@@ -140,7 +140,7 @@ pwn.college{8R_JKEZy5B4oX7Dapsw8_JzfIdi.dBTN1QDLzcTN0czW}
 pwn.college{0KVWhfIpbvCE8jGs1-2W301Okrj.dFTN1QDLzcTN0czW}
 
 **Procedure** 
-```
+```bash
 hacker@paths~implicit-relative-path:~$ cd /challenge
 hacker@paths~implicit-relative-path:/challenge$ run
 bash: run: command not found
@@ -157,7 +157,7 @@ pwn.college{0KVWhfIpbvCE8jGs1-2W301Okrj.dFTN1QDLzcTN0czW}
 pwn.college{87ehKGMg_Rinjv-YdEChtrAdkoR.dNzM4QDLzcTN0czW}
 
 **Procedure**
-```
+```bash
 hacker@paths~home-sweet-home:~$ /challenge/run
 You must provide an argument to /challenge/run when you invoke it!
 hacker@paths~home-sweet-home:~$ /challenge/run ~/copy
@@ -171,6 +171,3 @@ Writing the file to /home/hacker/a!
 ... and reading it back to you:
 pwn.college{87ehKGMg_Rinjv-YdEChtrAdkoR.dNzM4QDLzcTN0czW}
 ```
-
-
-

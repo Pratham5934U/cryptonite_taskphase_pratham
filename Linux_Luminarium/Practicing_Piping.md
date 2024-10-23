@@ -7,7 +7,7 @@ pwn.college{0spdNvHg94S3tc_p85cJmgn-o9_.dRjN1QDLzcTN0czW}
 In this challenge I just had to redirect the output 'PWN' to file named 'COLLEGE' .
 
 **Code:**    
-```
+```bash
 hacker@piping~redirecting-output:~$ echo PWN > COLLEGE
 Correct! You successfully redirected 'PWN' to the file 'COLLEGE'! Here is your 
 flag:
@@ -22,7 +22,7 @@ pwn.college{ojMPUinmJ2ibQ5x-mTuMwnKP86S.dVjN1QDLzcTN0czW}
 In this challenge I had to redirect the output of '/challenge/run' to file name 'myflag' . 
 
 **Code:**  
-```
+```bash
 hacker@piping~redirecting-more-output:~$ /challenge/run > myflag
 [INFO] WELCOME! This challenge makes the following asks of you:
 [INFO] - the challenge will check that output is redirected to a specific file path : myflag
@@ -52,7 +52,7 @@ pwn.college{cVOiFqCUGM9aW3uUWPtgUMXSuOO.ddDM5QDLzcTN0czW}
 In this challenge according to the instruction redirection in truncation mode (>) resulted in the later half of the flag and redirection in append mode (>>) resulted in the whole flag.
 
 **Code:**  
-```
+```bash
 hacker@piping~appending-output:~$ /challenge/run > ~/the-flag
 [INFO] WELCOME! This challenge makes the following asks of you:
 [INFO] - the challenge will check that output is redirected to a specific file path : /home/hacker/the-flag
@@ -132,7 +132,7 @@ mode!
 I had to redirect the output of /challenge/run, like before, to myflag, and the "errors" (in our case, the instructions) to instructions and then use the cat command to get the flag.
 
 **Code:**  
-```
+```bash
 hacker@piping~redirecting-errors:~$ /challenge/run > myflag 2> instructions
 hacker@piping~redirecting-errors:~$ cat myflag
 
@@ -150,7 +150,7 @@ pwn.college{oxr3DTgHvwpbjisuhASHdf6uEmN.dBzN1QDLzcTN0czW}
 In this challenge I was to required to redirect the PWN file to it and have the PWN file contain the value COLLEGE! To write that value to the PWN file, recall the prior challenge on output redirection from echo!_
 
 **Code:**  
-```
+```bash
 hacker@piping~redirecting-input:~$ echo COLLEGE > PWN
 hacker@piping~redirecting-input:~$ /challenge/run <PWN
 Reading from standard input...
@@ -173,7 +173,7 @@ In this thing challenge I had to do a number of things-
 (3)Grep that for the flag!
 
 **Code:**  
-```
+```bash
 hacker@piping~grepping-stored-results:~$ /challenge/run > /tmp/data.txt
 [INFO] WELCOME! This challenge makes the following asks of you:
 [INFO] - the challenge will check that output is redirected to a specific file path : /tmp/data.txt
@@ -206,7 +206,7 @@ pwn.college{YnQRyCGBWUkhweG0iRwCrlXV2RK.dlTM4QDLzcTN0czW}
 Here I had to grep flag from '/challenge/run' which resulted in a thosand lines on executing it.
 
 **Code:**  
-```
+```bash
 hacker@piping~grepping-live-output:~$  /challenge/run | grep pwn.college
 [INFO] WELCOME! This challenge makes the following asks of you:
 [INFO] - the challenge checks for a specific process at the other end of stdout : grep
@@ -239,7 +239,7 @@ pwn.college{Mr00H0Oc42t2eKw2ZRAi0Ajgelg.dVDM5QDLzcTN0czW}
 This time I had to use >& operator, which redirects a file descriptor to another file descriptor. This means that there is a two-step process to grep through errors: first, redirect standard error to standard output (2>& 1) and then pipe the now-combined stderr and stdout as normal (|). I had to grep through standard error to find the flag.
 
 **Code:**  
-```
+```bash
 hacker@piping~grepping-errors:~$  /challenge/run 2>&1 | grep pwn.college
 [INFO] WELCOME! This challenge makes the following asks of you:
 [INFO] - the challenge checks for a specific process at the other end of stderr : grep
@@ -272,7 +272,7 @@ pwn.college{A_KkXe0PPI-guGNs4e7UdYPWaWh.dFjM5QDLzcTN0czW}
 Here the data in /challenge/pwn had to be piped into /challenge/college and I aslo had to intercept the dat in order to see what pwn needed from me.
 
 **Code:**  
-```
+```bash
 hacker@piping~duplicating-piped-data-with-tee:~$ /challenge/pwn | tee output | /challenge/college
 Processing...
 The input to 'college' does not contain the correct secret code! This code 
@@ -298,7 +298,7 @@ pwn.college{UR1U6ZgkXxRukcbFWIjSmE_C-_3.dBDO0UDLzcTN0czW}
 tee designed to write to files and to standard output it is used to duplicate data to a file and a command or duplicate data to two files.In this challenge, I had /challenge/hack, /challenge/the, and /challenge/planet. I had to run the /challenge/hack command, and duplicate its output as input to both the /challenge/the and the /challenge/planet commands.
 
 **Code:**  
-```
+```bash
 hacker@piping~writing-to-multiple-programs:~$ /challenge/hack | tee >(/challenge/the) | /challenge/planet
 Congratulations, you have duplicated data into the input of two programs! Here 
 is your flag:
@@ -318,7 +318,7 @@ In this challenge I had to
 I I tried to redirect hack's stderr and stdout individually but it did not work so I wrote the whole command I one line and got the flag. 
 
 **Code:**  
-```
+```bash
 hacker@piping~split-piping-stderr-and-stdout:~$ /challenge/hack 2> >(/challenge/the)
 You must redirect my standard output into '/challenge/planet'!
 hacker@piping~split-piping-stderr-and-stdout:~$ /challenge/hack 1> >(/challenge/planet)
