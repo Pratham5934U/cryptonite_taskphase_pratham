@@ -1,19 +1,19 @@
-![Cryptonite Taskphase]()
+![Cryptonite Taskphase](./Images/Cryptonite.jpg)
 
 ## Day 1-10
 
-- [**Hello Hackers**](./source/hello_hackers.md)
-- [**Pondering Paths**](./source/pondering_paths.md)
-- [**Comprehending Commands**](./source/comprehending_commands.md)
-- [**Digesting Documentation**](./source/digesting_documentation.md)
-- [**File Globbing**](./source/file_globbing.md)
-- [**Practicing Piping**](./source/practicing_piping.md)
+- [**Hello Hackers**](./Linux Luminarium/HELLO_HACKERS.md)
+- [**Pondering Paths**](./Linux Luminarium/Pondering Paths.md)
+- [**Comprehending Commands**](./Linux Luminarium/Comprehending Commands.md)
+- [**Digesting Documentation**](./Linux Luminarium/Digesting Documentation.md)
+- [**File Globbing**](./Linux Luminarium/File Globbing.md)
+- [**Practicing Piping**](./Linux Luminarium/Practicing Piping)
 
 
 ## Day 11-20
-- [**Shell Variables**](./source/shell_variables.md)
-- [**Processes and Jobs**](./source/processes_and_jobs.md)
-- [**Perceiving Permissions**](./source/perceiving_permissions.md)
-- [**Untangling Users**](./source/untangling_users.md)
-- [**Chaining Commands**](./source/chaining_commands.md)
-- [**Pondering PATH**](./source/pondering_path.md)
+- [**Shell Variables**](./Linux Luminarium/Shell Variables.md)
+- [**Processes and Jobs**](./Linux Luminarium/Processes and Jobs.md)
+- [**Perceiving Permissions**](./Linux Luminarium/Perceiving Permissions.md)
+- [**Untangling Users**](./Linux Luminarium/Untangling Users.md)
+- [**Chaining Commands**](./Linux Luminarium/Chaining Commands.md)
+- [**Pondering PATH**](./Linux Luminarium/Pondering Path.md)
