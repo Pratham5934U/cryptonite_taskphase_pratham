@@ -2,7 +2,7 @@
 
 ## Day 1-10
 
-- [**Hello Hackers**](./Linux Luminarium/HELLO_HACKERS.md)
+- [**Hello Hackers**](./HELLO_HACKERS.md)
 - [**Pondering Paths**](./Linux Luminarium/Pondering Paths.md)
 - [**Comprehending Commands**](./Linux Luminarium/Comprehending Commands.md)
 - [**Digesting Documentation**](./Linux Luminarium/Digesting Documentation.md)
