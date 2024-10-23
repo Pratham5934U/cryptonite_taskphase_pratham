@@ -15,5 +15,5 @@
 - [**Processes and Jobs**](./Linux Luminarium/Processes and Jobs.md)
 - [**Perceiving Permissions**](./Linux Luminarium/Perceiving Permissions.md)
 - [**Untangling Users**](./Linux Luminarium/Untangling Users.md)
-- [**Chaining Commands**](./Linux_Luminarium/Chaining_Commands.md)
+- [**Chaining Commands**](/Linux_Luminarium/Chaining_Commands.md)
 - [**Pondering PATH**](./Linux Luminarium/Pondering Path.md)
