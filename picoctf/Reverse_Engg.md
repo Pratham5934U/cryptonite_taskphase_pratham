@@ -10,7 +10,7 @@ basically wants the correct password which could be easily seen in the program i
 of the flag.
 
 **Program Created**     
-![Program which I created to get the flag content ](./Images/Vaultdoor3_created_program.png)
+![Program which I created to get the flag content ](./Images/Crypto.gif)
 
 **CHALLENGE PROGRAM**      
 ```bash
