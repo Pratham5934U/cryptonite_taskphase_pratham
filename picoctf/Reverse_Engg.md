@@ -1,4 +1,4 @@
-## Vault door 3
+## 3. Vault door 3
 
 **Flag-**   
 picoCTF{jU5t_a_s1mpl3_an4gr4m_4_u_79958f}
