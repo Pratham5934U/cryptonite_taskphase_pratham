@@ -10,7 +10,8 @@ picoCTF{549698}
   when it changed I disassembled the main function and checked where I was in the main function. After reading the assembly code I figured out the
   required value and got the flag.
 
-**My Working-**
+**My Working-**         
+(After setting up break point and running the program)      
  ```bash
 Breakpoint 1, 0x0000555555555131 in main ()
 (gdb) print $eax
