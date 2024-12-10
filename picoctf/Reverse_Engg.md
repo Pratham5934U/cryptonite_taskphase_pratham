@@ -1,3 +1,70 @@
+## 1. GDB baby step 1
+
+**Flag-**    
+picoCTF{549698}
+
+> ### **Thought Process-**
+> In this challenge with the help of the hint I can to know about `GDB`, after knowing how to work on it I first intalled it on `WSL` using command
+  `sudo apt install gdb` after intalling I ran `gdb debugger0_a` then made a break point at main using `break main` after this I used the command `run`
+  from this point I kept on running each and every intruction in main one-by-one using command `stepi` along with it I kept a check on value in `eax`,
+  when it changed I disassembled the main function and checked where I was in the main function. After reading the assembly code I figured out the
+  required value and got the flag.
+
+**My Working-**
+ ```bash
+Breakpoint 1, 0x0000555555555131 in main ()
+(gdb) print $eax
+$1 = 1431654697
+(gdb) stepi
+0x0000555555555134 in main ()
+(gdb) print $eax
+$2 = 1431654697
+(gdb) stepi
+0x0000555555555138 in main ()
+(gdb) print $eax
+$3 = 1431654697
+(gdb) stepi
+0x000055555555513d in main ()
+(gdb) print $eax
+$4 = 549698
+(gdb) diassemble main
+Undefined command: "diassemble".  Try "help".
+(gdb) disassemble main
+Dump of assembler code for function main:
+   0x0000555555555129 <+0>:     endbr64
+   0x000055555555512d <+4>:     push   %rbp
+   0x000055555555512e <+5>:     mov    %rsp,%rbp
+   0x0000555555555131 <+8>:     mov    %edi,-0x4(%rbp)
+   0x0000555555555134 <+11>:    mov    %rsi,-0x10(%rbp)
+   0x0000555555555138 <+15>:    mov    $0x86342,%eax
+=> 0x000055555555513d <+20>:    pop    %rbp
+   0x000055555555513e <+21>:    ret
+End of assembler dump.
+(gdb) stepi
+0x000055555555513e in main ()
+(gdb)
+
+ ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ## 2. ARMssembly 1
 
 **Flag-**     
