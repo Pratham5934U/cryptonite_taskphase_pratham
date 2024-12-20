@@ -191,3 +191,18 @@ if __name__ == "__main__":
     decrypt_ciphertext()
 
 ```
+
+## 3. miniRSA
+
+### **Flag-**    
+picoCTF{n33d_a_lArg3r_e_ccaa7776}
+
+### **Thought Process-**    
+> In this challenge, it was the value of `n` which was creating a problem it was so big that it was too difficult to find out `p` and `q`, I tried many programs from the simple RSA decryption program to advavance algorithms such as `Elliptic Curve Method (ECM)`, `Quadratic Sieve` utilising `RsaCtfTool`, `factordb` to find out values of `p`, `q` or the required flag. I then started again and found out a rsa cipher tool `dcode.fr` with the help of which I got my flag.
+
+### **Sources-**
+1. RsaCtfTool: https://github.com/RsaCtfTool/RsaCtfTool/blob/master/RsaCtfTool.py
+2. Factordb: https://factordb.com
+3. dcode.fr: https://www.dcode.fr/rsa-cipher
+
+   
