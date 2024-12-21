@@ -75,6 +75,6 @@ ff851200ff8512208049346782578257825782578257825782578257825782578257825782578257
 ```
 
 **Tool-**      
-![Rapid_Tables]
+![Rapid_Tables](/Images/picoCTF_flag_leak.png)
 
 Here I figured out that I had to rearrange the flag as at the end of the flag `{` this should be there but I was shifted this helped to figure out the shifting.
