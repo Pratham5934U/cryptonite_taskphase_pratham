@@ -10,6 +10,7 @@ picoCTF{XML_3xtern@l_3nt1t1ty_e79a75d4}
 ![Use of Burp suite](/Images/Web_exp_SOAP.png)
 
 
+---
 ## 2. Forbidden Paths
 
 ### **Flag-**       
@@ -22,7 +23,8 @@ picoCTF{7h3_p47h_70_5ucc355_e5fe3d4d}
  `Burp suit` to see if I can observe anything but I could not find anything.
 
 
-## 2. cookies 
+---
+## 3. cookies 
 
 ### **Flag-**        
 picoCTF{3v3ry1_l0v3s_c00k135_88acab36}
