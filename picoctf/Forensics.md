@@ -19,10 +19,10 @@ picoCTF{qu1t3_a_v13w_2020}
  to fix,after doing the necessary changes I was able to get the flag in the picture.
 
 ### **Changes done in Hex Editor-**
-![Modifications in hex editor]()
+![Modifications in hex editor](/Images/Tunnel_hex_Editor.png)
 
 ### **Picture after modification-**   
-![Flag pic]()
+![Flag pic](/Images/picoCTF_tunn3l_v1s10n.bmp)
 
 
 ## 3. m00nwalk
@@ -37,7 +37,7 @@ picoCTF{beep_boop_im_in_space}
   output which had the flag.
 
 ### **Output-**
-![Output]()
+![Output](/Images/picoCTF_moonwalk.jpg)
 
 ### **Sources that I went across-**  
 1. noaa-apt: https://noaa-apt.mbernardi.com.ar/
