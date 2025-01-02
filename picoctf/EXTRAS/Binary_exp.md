@@ -562,3 +562,56 @@ Error: you don't own this file
 ctf-player@pico-chall$ Connection to saturn.picoctf.net closed by remote host.
 Connection to saturn.picoctf.net closed.
 ```
+
+
+## 2.   two-sum
+
+### **Flag-**         
+ picoCTF{Tw0_Sum_Integer_Bu773R_0v3rfl0w_ccd078bd}
+
+ ### **Thought Process-**          
+> First I went through the program  understood the program then I tried finding the numbers but I was not able to get any because the condition required were only not possible then with the help of the hint `Not necessarily a math problem` I realized that it might have to do something the with the overflows due to enter value more than `int` can store but it still did not print the flag beacuse the value which were working in the program were neative and to print the flag the value being computed by the flag had to positive so I tried using a negative sign and it worked.
+
+### **Working-**
+```bash
+pratham@:~$ nc saturn.picoctf.net 57945
+n1 > n1 + n2 OR n2 > n1 + n2
+What two positive numbers can make this possible:
+20000000000000
+50000000000000
+You entered -1662697472 and -2009260032
+You have an integer overflow
+^C
+pratham@:~$ nc saturn.picoctf.net 57945
+n1 > n1 + n2 OR n2 > n1 + n2
+What two positive numbers can make this possible:
+10000000
+50000000
+You entered 10000000 and 50000000
+No overflow
+^C
+pratham@:~$ nc saturn.picoctf.net 57945
+n1 > n1 + n2 OR n2 > n1 + n2
+What two positive numbers can make this possible:
+90000000
+80000000
+You entered 90000000 and 80000000
+No overflow
+^C
+pratham@:~$ nc saturn.picoctf.net 57945
+n1 > n1 + n2 OR n2 > n1 + n2
+What two positive numbers can make this possible:
+3000000000
+3000000000
+You entered -1294967296 and -1294967296
+You have an integer overflow
+^F^C
+pratham@:~$ nc saturn.picoctf.net 57945
+n1 > n1 + n2 OR n2 > n1 + n2
+What two positive numbers can make this possible:
+-3000000000
+-3000000000
+You entered 1294967296 and 1294967296
+You have an integer overflow
+YOUR FLAG IS: picoCTF{Tw0_Sum_Integer_Bu773R_0v3rfl0w_ccd078bd}
+```
