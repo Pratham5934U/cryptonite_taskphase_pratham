@@ -15,4 +15,4 @@ picoCTF{D0NT_US3_V1G3N3R3_C1PH3R_ae82272q}
 > It was clear from the hint that it was a `Vigenere Cipher` so I had to just decode it.
 
 ### **Decoded text-**         
-![decoded using dcode.fr]()
+![decoded using dcode.fr](/Images/Vigenere_decoded.png)
