@@ -1,5 +1,7 @@
 ![Cryptonite Taskphase](./Images/Crypto.gif)
 
+# **TASKPHASE-1(Linux Luminarium)**
+
 ## Day 1-10
 
 - [**Hello Hackers**](./Linux_Luminarium/HELLO_HACKERS.md)
@@ -17,3 +19,17 @@
 - [**Untangling Users**](./Linux_Luminarium/Untangling_Users.md)
 - [**Chaining Commands**](/Linux_Luminarium/Chaining_Commands.md)
 - [**Pondering PATH**](./Linux_Luminarium/Pondering_Path.md)
+
+## **Extra-**
+- [**Bandit**]()
+
+## **Competitions-**
+- [**Oasis**]()
+- 
+# **Taskphase-2(PicoCTF)**
+-[****]()
+-[****]()
+-[****]()
+-[****]()
+
+
