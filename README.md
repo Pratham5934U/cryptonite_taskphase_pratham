@@ -27,7 +27,7 @@
 
           
 # **Taskphase-2(PicoCTF)**
-![Progress Report]()
+![Progress Report](./Images/picoCTF_progress.png)
 
 - [**Binary Exploitation**](./picoctf/Binary_Exp.md)        
 - [**Cryptography**](./picoctf/Cryptography.md)         
