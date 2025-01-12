@@ -16,7 +16,7 @@ picoCTF{qu1t3_a_v13w_2020}
 
 ### **Thought Process-**    
 > With the help of Hex editor I came to know that it was a `bmp` file, it started with `BM`, which was corrupted so I had to figure out the right changes to be done
- to fix,after doing the necessary changes I was able to get the flag in the picture.
+ to fix,after doing the necessary changes I was able to get the flag in the picture. I took the help of wikipedia to find out that where I could make changes to length and width so that I can get the flag.
 
 ### **Changes done in Hex Editor-**
 ![Modifications in hex editor](/Images/Tunnel_hex_Editor.png)
