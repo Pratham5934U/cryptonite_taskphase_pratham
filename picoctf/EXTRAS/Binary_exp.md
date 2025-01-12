@@ -12,7 +12,7 @@ picoCTF{ToctoU_!s_3a5y_0490d70a}
 > 4. Then I tried to copy flag file contents to another file then print the other file.
 > 5. Then I remembered that I forgot to compile the `src.cpp` file before running so I had to again perform the required modifications in `src.cpp` and then I > compiled it but even after running it, it did not work so I understood this will not affect the output.
 > 6. So now I read the challenge description again and tried to re-interpret it. It gave me the ida that maybe I can create a program which uses `root` to read the content of `flag.txt` but I was again uunable to do so.
-> 7. Thereafter I opened the `src.cpp` file and started observing and searching for vulnerabilities in it as it was the souce code of the binary file. Then I came across `TOCTOU` and came to know that this should work as this was there in challenge description(the word which I was not able to understand back then). For this I tired several ways.
+> 7. Thereafter I opened the `src.cpp` file and started observing and searching for vulnerabilities in it as it was the souce code of the binary file. Then I came across `TOCTOU` and came to know that this should work as this was there in challenge description(the word which I was not able to understand back then). For this I tried several ways.
 > 8. First of all I created a continuos link chain `flag.txt -> link1 -> link2 -> link3 -> link4 -> link5 -> link6` and tried `./txtreader link6` but his didn't work.
 > 9. then I tried link the file and run `txtreader` a number of times in a loop like parallel execution `for i in {1..500}; do ln -sf flag.txt link6 & ./txtreader link6 & done`.
 > 10. I also tried it with controlled timing `for i in {1..500}; do ln -sf flag.txt link6 sleep 0.001 ./txtreader link6 done`.
