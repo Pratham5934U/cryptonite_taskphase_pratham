@@ -21,15 +21,21 @@
 - [**Pondering PATH**](./Linux_Luminarium/Pondering_Path.md)
 
 ## **Extra-**
-- [**Bandit**]()
+- [**Bandit**](./Bandit.md)
 
 ## **Competitions-**
-- [**Oasis**]()
-- 
+- [**Oasis**](./Oasis.md)
+
 # **Taskphase-2(PicoCTF)**
--[****]()
--[****]()
--[****]()
--[****]()
+
+-[**Binary Exploitation**](./picoctf/Binary_Exp.md)        
+-[**Cryptography**](./picoctf/Cryptography.md)         
+-[**Forensics**](./picoctf/Forensics.md)           
+-[**Reverse Engineering**](./picoctf/Reverse_Engg.md)
+-[**Web Exploitation**](./picoctf/Web_Exp.md)  
+- [**Extras**](./picoctf/EXTRAS)  
+
+## **Competition-**          
+- [**niteCTF**](./niteCTF)
 
 
